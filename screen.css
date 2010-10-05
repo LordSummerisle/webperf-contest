@@ -104,3 +104,10 @@ p, ul {
 	padding:1em;
 	width:13em
 }
+h1 .logo {
+	float: right;
+	clear: right;
+}
+h1 .logo img {
+	vertical-align: middle;
+}
