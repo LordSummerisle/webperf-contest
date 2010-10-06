@@ -8,8 +8,9 @@ TODO:
 - rédiger les pages en Français
 - améliorer peut être un peu l'interface, quelque chose de plus sexy
 - mieux préciser les règles et ce que les gens peuvent faire/ne pas faire
-- Rajouter : Best sum of YSLOW, Pagespeed, Zoompf & DynaTrace scores
-- Rajouter : Best onClient time (test DynaTrace avec Dulles VA)
+- Rajouter : Best sum of YSLOW, Pagespeed, [Zoompf] [DynaTrace] (si sponsors = pas de lot supplémentaire)
+--[- Rajouter best DynaTrace rank comme mesure, et essayer d'obtenir un lot pour ça/sponsor]
+--[- Rajouter best zoompf score comme mesure et essayer d'obtenir un lot pour ça/sponsor]
 - faire (et lier) un formulaire pour l'inscription (voir gdoc "procédure inscription")
 - hébergement sur un CDN pour avoir un maximum de disponibilité ? Pas cher normalement, je peux payer.
 - Faire un beau bloc "sponsors" avec le logo Yottaa en premier, de la même taille que le logo alwaysdata juste en dessous, puis le logo Zeroload, si besoin on pourra rajouter un autre sponsor.
