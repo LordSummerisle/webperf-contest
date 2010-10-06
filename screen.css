@@ -107,6 +107,7 @@ p, ul {
 h1 .logo {
 	float: right;
 	clear: right;
+	margin: 5px;
 }
 h1 .logo img {
 	vertical-align: middle;
