@@ -12,16 +12,19 @@ TODO:
 --[- Rajouter best DynaTrace rank comme mesure, et essayer d'obtenir un lot pour ça/sponsor]
 --[- Rajouter best zoompf score comme mesure et essayer d'obtenir un lot pour ça/sponsor]
 - faire (et lier) un formulaire pour l'inscription (voir gdoc "procédure inscription")
-- hébergement sur un CDN pour avoir un maximum de disponibilité ? Pas cher normalement, je peux payer.
-- Faire un beau bloc "sponsors" avec le logo Yottaa en premier, de la même taille que le logo alwaysdata juste en dessous, puis le logo Zeroload, si besoin on pourra rajouter un autre sponsor.
-- Changer la première phrase "Zeroload organise.." en "Zeroload organise avec YOOTTAA et AlwaysData" Je ne voudrais pas qu'on nous reproche de favoriser certains sponsors, YOTTAA et alwaysdata seront au même niveau vu ce qu'ils fournissent.
+
+
 
 DISCUSS:
-- créer la page "HELP NEEDED" (et la renommer en quelque chose de plus attrayant!) qui devra servir à convaincre d'éventuels gros sites web d'être l'exemple du concours (même si on en trouve entre temps)
---- Pour l'instant lié à un paragraphe spécifique de #sponsors, ça peut suffire
-ok pour moi (@vvo)
+- hébergement sur un CDN pour avoir un maximum de disponibilité ? Pas cher normalement, je peux payer.
+--- Perso je ne vois pas l'utilité ici par rapport aux simples sous domaines. Les tests WPT sont faits à faibles distance et tous auront les mêmes outils avec les mêmes latence. Introduire de CDN serait presque ajouter des risques de disparité supplémentaires "non gérables" (puisqu'on ne peut pas décider de où on tapera) - @edas
+
 
 DONE:
 - enlever le nom de aaron peters des organisateurs, il sera simplement juge
 - créer une section "juges"
 - mieux préciser les règles et ce que les gens peuvent faire/ne pas faire (mais mérite encore du travail)
+- Faire un beau bloc "sponsors" avec le logo Yottaa en premier, de la même taille que le logo alwaysdata juste en dessous, puis le logo Zeroload, si besoin on pourra rajouter un autre sponsor.
+- Changer la première phrase "Zeroload organise.." en "Zeroload organise avec YOOTTAA et AlwaysData" Je ne voudrais pas qu'on nous reproche de favoriser certains sponsors, YOTTAA et alwaysdata seront au même niveau vu ce qu'ils fournissent.
+- créer la page "HELP NEEDED" (et la renommer en quelque chose de plus attrayant!) qui devra servir à convaincre d'éventuels gros sites web d'être l'exemple du concours (même si on en trouve entre temps)
+--- Pour l'instant lié à un paragraphe spécifique de #sponsors, ça peut suffire (ok pour moi (@vvo))
