@@ -10,7 +10,8 @@ body {
 #header {
 	padding:.5% 1% 0 0;
 	-moz-border-radius:0 0 5px 0;
-	background: #FFFFFF; /* old browsers */
+	-webkit-border-radius:0 0 5px 0;
+	background: #8EECB9; /* old browsers */
 	background: -moz-linear-gradient(top, #FFFFFF 0%, #8EECB9 100%); /* firefox */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#8EECB9)); /* webkit */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#8EECB9',GradientType=0 ); /* ie */
@@ -24,6 +25,7 @@ body {
 	background:#fff;
 	padding:.2%;
 	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
 	margin:.15% 0;
 }
 
@@ -45,6 +47,7 @@ body {
 
 #menu a:last-child {
 	-moz-border-radius:0 5px 0 0;
+	-webkit-border-radius:0 5px 0 0;
 }
 
 #menu a:hover {
@@ -124,3 +127,62 @@ a:active {
 	font-style: normal;
 	font-variant: normal;
 }
+
+/**
+Register
+*/
+#downloadButton {
+	padding:.5em 1em;
+	text-decoration:none;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size:120%;
+	/*	-moz-box-shadow: 0 1px 3px #999;
+	-webkit-box-shadow: 0 1px 3px #999;*/
+	background: #C2CE7B; /* old browsers */
+	background: -moz-linear-gradient(top, #C2CE7B 0%, #96B548 50%, #7DA521 51%, #A5C64F 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C2CE7B), color-stop(50%,#96B548), color-stop(51%,#7DA521), color-stop(100%,#A5C64F)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C2CE7B', endColorstr='#A5C64F',GradientType=0 ); /* ie */
+}
+
+#downloadButton:hover {
+	background: #bfd255; /* old browsers */
+	background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfd255), color-stop(50%,#8eb92a), color-stop(51%,#72aa00), color-stop(100%,#9ecb2d)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* ie */
+}
+
+.classicForm {
+	width:50%;
+}
+
+.classicForm legend {
+	font-weight:bold;
+	margin:1%;
+}
+
+.classicForm label {
+	display:block;
+	width:75%;
+	overflow:hidden;
+	margin-bottom:1%;
+	padding:0 0 0 2%;
+}
+
+.classicForm label input {
+	float:right;
+}
+
+#registerForm {
+	font-size:120%;
+	background:#fff;
+	margin:0 auto;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:2%;
+	-moz-box-shadow:inset 0 0 10px #999;
+	-webkit-box-shadow:inset 0 0 10px #999;
+}
+
+.importantBot{display:none}

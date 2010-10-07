@@ -3,16 +3,37 @@ Ce repo représente le site web qui tourne sur http://preview.webperf-contest.co
 Si vous créez de nouveaux fichiers ou bien si vous souhaitez réaliser une tâche, merci de l'indiquer quelque part afin qu'on ne fasse pas deux fois la même chose !
 En attendant que j'organise mieux le travail ou que vous vous proposiez pour réaliser une des tâches.
 
-TODO:
+TODO: (vous pouvez prendre ce que vous voulez)
 - corriger les fautes d'anglais
-- rédiger les pages en Français
-- rajouter un bandeau central avec marqué en grosses lettres "Zeroload and .. organizin.. 1st Prize : 2nd Prize 3rd Prize"...
 - mieux préciser les règles et ce que les gens peuvent faire/ne pas faire
+- rajouter un bandeau central avec marqué en grosses lettres "Zeroload and .. organizin.. 1st Prize : 2nd Prize 3rd Prize"...
+
 - Rajouter : Best sum of YSLOW, Pagespeed, [Zoompf] [DynaTrace] (si sponsors = pas de lot supplémentaire)
 --[- Rajouter best DynaTrace rank comme mesure, et essayer d'obtenir un lot pour ça/sponsor]
 --[- Rajouter best zoompf score comme mesure et essayer d'obtenir un lot pour ça/sponsor]
-- faire (et lier) un formulaire pour l'inscription (voir gdoc "procédure inscription")
-- finalement faire une page spéciale pour demaner de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
+
+- procédure d'inscription :
+--- envoit d'un mail récapitulatif au participant
+--- modifier la BDD pour avoir des champs indiquants "logins ftp envoyés, oui/non"
+--- +1 champs "admin", dans lequel ceux qui peuvent créer des comptes FTP le feront et enverront ensuite les logins automatiquement avec un lien
+--- si non = il faut créer le dossier à la main sur le FTP et créé l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
+--- dashboard des inscriptions avec toutes les informations + "logins envoyés, oui/non"
+--- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
+
+on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
+
+- finalement faire une page spéciale pour demander de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
+
+- rédiger les pages en Français
+
+-- TODO vvo pour faciliter la période de jugement
+-- dashboard amélioré : lancer automatiquement des tests WPT toutes les 2heures et enregistrer les résultats dans des fichiers JSON (deux séparés, l'un avec toutes les données = admin, l'autr
+avec l'essentiel : nom twitter + temps de la page + scores pagespeed)
+-- utiliser node.js pour faire ça, ce sera simple
+-- ensuite avec le dashboard amélioré en ajax on va récupérer le gros fichier JSON et on le traite
+s'inspirer de http://code.webpagetest.org/svn/compete/upload.php pour lancer les tests
+
+-- pour YOTTAA je ne sais pas encore comment faire
 
 
 DISCUSS:
@@ -30,3 +51,6 @@ DONE:
 - créer la page "HELP NEEDED" (et la renommer en quelque chose de plus attrayant!) qui devra servir à convaincre d'éventuels gros sites web d'être l'exemple du concours (même si on en trouve entre temps)
 --- Pour l'instant lié à un paragraphe spécifique de #sponsors, ça peut suffire (ok pour moi (@vvo))
 - améliorer peut être un peu l'interface, quelque chose de plus sexy
+- faire (et lier) un formulaire pour l'inscription (voir gdoc "procédure inscription")
+--- Fait un formulaire + script php qui réalisent l'insertion dans une BDD des données essentielles, j'ai aussi modifié un peu la procédure d'inscription pour pas que les gens aient à revenir
+préciser les modifications qu'ils ont faites (voir gist sur le formulaire)
