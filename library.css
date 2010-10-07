@@ -1,0 +1,121 @@
+/*
+    Document   : custom
+    Created on : 14 avr. 2010, 11:00:01
+    Author     : vincent
+    Description:
+       this is the standard library for Zeroload, use it as much as you can
+*/
+
+/**
+Text
+*/
+.bold {font-weight: bold}
+.italic {font-style: italic}
+.caps {text-transform: uppercase}
+.smallCaps {font-variant: small-caps}
+.center {text-align:center}
+.right {text-align:right}
+.left {text-align:left}
+.justify {text-align:justify}
+.fontWeight100 {font-weight:100}
+.fontWeight200 {font-weight:200}
+.fontWeight300 {font-weight:300}
+.fontWeight400 {font-weight:400}
+.fontWeight500 {font-weight:500}
+
+
+/* font size ccording to yui */
+.font08 {font-size:61%}
+.font09 {font-size:69%}
+.font10 {font-size:77%}
+.font11 {font-size:85%}
+.font12 {font-size:93%}
+.font13 {font-size:100%}
+.font14 {font-size:108%}
+.font15 {font-size:116%}
+.font16 {font-size:123.1%}
+.font17 {font-size:131%}
+.font18 {font-size:138.5%}
+.font19 {font-size:146.5%}
+.font20 {font-size:153.9%}
+.font21 {font-size:161.6%}
+.font22 {font-size:167%}
+.font23 {font-size:174%}
+.font24 {font-size:182%}
+.font25 {font-size:190%}
+.font26 {font-size:198%}
+.font27 {font-size:206%}
+.font28 {font-size:214%}
+.font29 {font-size:222%}
+.font30 {font-size:230%}
+.font31 {font-size:238%}
+.font32 {font-size:246%}
+.font33 {font-size:254%}
+.font34 {font-size:262%}
+.font35 {font-size:270%}
+.font39 {font-size:302%}
+.font40 {font-size:310%}
+.font45 {font-size:350%}
+.font46 {font-size:358%}
+.font47 {font-size:376%}
+.font50 {font-size:390%}
+.font52 {font-size:406%}
+
+.block {display:block}
+.inlineBlock {display:inline-block} /* see support on http://www.quirksmode.org/css/display.html#inlineblock */
+.tableCell {display:table-cell}
+.relative {position:relative}
+.absolute {position:absolute}
+.hide {display:none}
+.posTop {top:0}
+.posRight {right:0}
+.posLeft {left:0}
+.posBottom {bottom:0}
+.centerBlock {margin-left:auto;margin-right:auto;display:block}
+
+.valignTop {vertical-align: top}
+.valignCenter {vertical-align:center}
+
+/**
+Floats, clearing etc
+*/
+.floatLeft {float:left}
+.floatRight {float:right}
+.clearLeft {clear:left}
+.clearRight {clear:right}
+.clearfix {overflow:hidden}
+
+/* just to be more specific, overflow hidden is not always used for clearfix, sometimes just to hide smth */
+.oHidden {overflow:hidden}
+
+/**
+Margins
+*/
+.marg0t {margin-top:0}
+.marg0tb {margin-top:0;margin-bottom:0}
+.marg0 {margin:0}
+.marg0b {margin-bottom:0}
+
+/**
+Paddings
+*/
+.pad0 {padding:0}
+
+/**
+backgrounds
+*/
+.bgGreen {background-color:#8EECB9}
+.bgWhite {background-color:#FFFFFF}
+.bgBlack {background-color:#000000}
+
+/**
+Font colors
+*/
+.white {color:#FFFFFF}
+.black {color:#000000}
+
+.classicTextShadow {
+	text-shadow:2px 2px 2px #888;
+}
+
+.pointer {cursor:pointer;}
