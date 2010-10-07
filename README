@@ -6,18 +6,19 @@ En attendant que j'organise mieux le travail ou que vous vous proposiez pour ré
 TODO:
 - corriger les fautes d'anglais
 - rédiger les pages en Français
-- améliorer peut être un peu l'interface, quelque chose de plus sexy
+- rajouter un bandeau central avec marqué en grosses lettres "Zeroload and .. organizin.. 1st Prize : 2nd Prize 3rd Prize"...
 - mieux préciser les règles et ce que les gens peuvent faire/ne pas faire
 - Rajouter : Best sum of YSLOW, Pagespeed, [Zoompf] [DynaTrace] (si sponsors = pas de lot supplémentaire)
 --[- Rajouter best DynaTrace rank comme mesure, et essayer d'obtenir un lot pour ça/sponsor]
 --[- Rajouter best zoompf score comme mesure et essayer d'obtenir un lot pour ça/sponsor]
 - faire (et lier) un formulaire pour l'inscription (voir gdoc "procédure inscription")
-
+- finalement faire une page spéciale pour demaner de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
 
 
 DISCUSS:
 - hébergement sur un CDN pour avoir un maximum de disponibilité ? Pas cher normalement, je peux payer.
 --- Perso je ne vois pas l'utilité ici par rapport aux simples sous domaines. Les tests WPT sont faits à faibles distance et tous auront les mêmes outils avec les mêmes latence. Introduire de CDN serait presque ajouter des risques de disparité supplémentaires "non gérables" (puisqu'on ne peut pas décider de où on tapera) - @edas
+--- Je parlai d'un hébergement pour notre site web a nous, webperf-planet.com, à voir.
 
 
 DONE:
@@ -28,3 +29,4 @@ DONE:
 - Changer la première phrase "Zeroload organise.." en "Zeroload organise avec YOOTTAA et AlwaysData" Je ne voudrais pas qu'on nous reproche de favoriser certains sponsors, YOTTAA et alwaysdata seront au même niveau vu ce qu'ils fournissent.
 - créer la page "HELP NEEDED" (et la renommer en quelque chose de plus attrayant!) qui devra servir à convaincre d'éventuels gros sites web d'être l'exemple du concours (même si on en trouve entre temps)
 --- Pour l'instant lié à un paragraphe spécifique de #sponsors, ça peut suffire (ok pour moi (@vvo))
+- améliorer peut être un peu l'interface, quelque chose de plus sexy
