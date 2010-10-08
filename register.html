@@ -22,7 +22,7 @@
 		</script>
 
 	</head>
-	<body id="top">
+	<body id="top" class="font12">
 		<div id="content-container">
 
 			<header class="block" id="header">
@@ -71,16 +71,16 @@
 				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="classicForm" id="registerForm" method="POST">
 					<fieldset>
 						<legend>Mandatory</legend>
-						<label>Name: <input type="text" name="name" /></label>
-						<label>Email: <input type="text" name="email" /></label>
-						<label>Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="text" name="gist" /></label>
+						<label for="name">Name: <input type="text" name="name" required placeholder="Your name" /></label>
+						<label for="email">Email: <input type="email" name="email" required placeholder="my@mail.com" /></label>
+						<label for="gist">Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
 						<span class="importantBot"><input type="checkbox" name="foo" id="foo"> I agree I'm not a bot (thanks!)</span>
 					</fieldset>
 
 					<fieldset>
 						<legend>Optionnal</legend>
-						<label>Website: <input type="text" name="website" /></label>
-						<label>Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
+						<label for="website">Website: <input type="url" name="website" /></label>
+						<label for="twitter">Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
 						<span class="importantBot"><input type="checkbox" name="bar" id="bar"> No, I'm a robot come to spam you</span>
 					</fieldset>
 

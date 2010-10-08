@@ -56,7 +56,8 @@ body {
 }
 
 #content-container {
-	width:70%;
+	width:85%;
+	min-width:40em;
 	background:#fff;
 }
 
@@ -137,7 +138,7 @@ Register
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	font-size:120%;
+	font-size:160%;
 	/*	-moz-box-shadow: 0 1px 3px #999;
 	-webkit-box-shadow: 0 1px 3px #999;*/
 	background: #C2CE7B; /* old browsers */
@@ -171,7 +172,11 @@ Register
 }
 
 .classicForm label input {
-	float:right;
+	width:95%;
+}
+
+.classicForm input:invalid {
+	border-color:red;
 }
 
 #registerForm {
