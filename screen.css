@@ -36,14 +36,15 @@ body {
 
 #menu a {
 	padding:.5% 1%;
-	background:#fff;
+	background:#777;
 	text-decoration:none;
-	color:#000;
+	color:#eee;
 	float:left;
 }
 
 #menu .current {
-	background:#ccc;
+	background:#fff;
+	color:#000
 }
 
 #menu a+a {
