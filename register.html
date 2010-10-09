@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>WebPerf contest - rank your web performance skills</title>
+		<title>WebPerf contest - Download & register</title>
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
@@ -22,7 +22,7 @@
 		</script>
 
 	</head>
-	<body id="top" class="font12">
+	<body id="top" class="font11">
 		<div id="content-container">
 
 			<header class="block" id="header">
@@ -36,12 +36,13 @@
 				<h1 class="sansRounded caps center classicTextShadow">
 					Webperf <span class="white">Contest</span> 2010
 				</h1>
-				<h2 class="center">Optimize a website's homepage and win some prizes !</h2>
+				<h2 class="center">Optimize a website's homepage and win some prizes</h2>
 
 				<nav id="menu" class="block clearfix bold caps">
-					<a href="index.html">info</a>
-					<a href="index.html#promote-your-site">your website for the contest ?</a>
-					<a href="register.html" class="deactivate">register</a>
+					<a href="/">home</a>
+					<a href="/be-our-website-example.html">your website for the contest ?</a>
+					<a href="/register.html" class="current">register</a>
+					<a href="/leaderboard.html" class="deactivate">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest">twitter</a>
 					<a href="mailto:info@webperf-contest.com">contact</a>
 				</nav>
@@ -50,56 +51,54 @@
 
 			<div id="text-container">
 
-				<h3>1/ Click on the big button (download)</h3>
+				<h3>1/ Download the example webpage</h3>
 
-				<p> Download the static webpage with all the assets :</p>
+				<p>Click on the big green button :</p>
 
-				<p class="center">
+				<p class="center marg2em">
 					<a href="somezipfile.zip" id="downloadButton" class="smallCaps bold white">⇩ download</a>
 				</p>
 
 				<p>If you just want to see if you can optimize this webpage, you can play with the above page and register later, no problem.</p>
 
-				<h3 id="gist">2/ Get a Gist URL</h3>				
-				<p>You have to :
-					<ol>
-						<li><strong><a href="http://gist.github.com" target="_blank">create a private gist</a></strong>
-						<li>write your name in it
-						<li>give us the full url
-					</ol>
-				</p>
-				
+				<h3 id="gist">2/ Get a Gist URL</h3>
+				<p>You have to :</p>
+				<ol>
+					<li><strong><a href="http://gist.github.com" target="_blank">create a <strong>private</strong> gist</a></strong></li>
+					<li>write your name in it</li>
+					<li>give us the full url (in the register form)</li>
+				</ol>
+
 				<p><a href="http://gist.github.com" target="_blank">Gist</a> is a free service of <a href="http://www.github.com" target="_blank">Github</a>, gists are small pieces of text/code that you can share with people easily. You dont have to register to Github to use it, dont worry</p>
-				
+
 				<p>During the contest, while modifying the sources, note in this Gist all the modifications you are doing.</p>
 
-				<p>This list of modifications will help us when judging :
-					<ul>
-						<li>to settle candidates with very close times / sizes ( &lt; 30ms, &lt; 5kb)
-						<li>to attribute the "innovation" award
-					</ul>
-				</p>
+				<p>This list of modifications will help us when judging :</p>
+				<ul>
+					<li>to settle candidates with very close times / sizes ( &lt; 30ms, &lt; 5kb)</li>
+					<li>to attribute the "innovation" award</li>
+				</ul>
 
 
-				<h3>3/ Read this small text (register)</h3>
+				<h3>3/ Register</h3>
 
 				<p>Registering will give you a <strong>unique ID</strong> that you'll have to keep secret. It will be your FTP access, and will allow us to uniquely identify you.</p>
 
 				<p><strong>Fill in the form</strong> if you want to proceed.</p>
 
-				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="classicForm" id="registerForm" method="POST">
+				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="insetShadowBox classicForm bgWhite" id="registerForm" method="POST">
 					<fieldset>
 						<legend>Mandatory</legend>
-						<label for="name">Name: <input type="text" name="name" required placeholder="Your name" /></label>
-						<label for="email">Email: <input type="email" name="email" required placeholder="my@mail.com" /></label>
-						<label for="gist">Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
+						<label>Name: <input type="text" name="name" required placeholder="Your name" /></label>
+						<label>Email: <input type="email" name="email" required placeholder="my@mail.com" /></label>
+						<label>Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
 						<span class="importantBot"><input type="checkbox" name="foo" id="foo"> I agree I'm not a bot (thanks!)</span>
 					</fieldset>
 
 					<fieldset>
 						<legend>Optionnal</legend>
-						<label for="website">Website: <input type="url" name="website" /></label>
-						<label for="twitter">Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
+						<label>Website: <input type="url" name="website" /></label>
+						<label>Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
 						<span class="importantBot"><input type="checkbox" name="bar" id="bar"> No, I'm a robot come to spam you</span>
 					</fieldset>
 

@@ -95,11 +95,17 @@ Margins
 .marg0tb {margin-top:0;margin-bottom:0}
 .marg0 {margin:0}
 .marg0b {margin-bottom:0}
+.marg05em {margin:.5em}
+.marg1em {margin:1em}
+.marg2em {margin:2em}
+.marg2emtb {margin-top:2em;margin-bottom:2em}
 
 /**
 Paddings
 */
 .pad0 {padding:0}
+.pad2em { padding:2em }
+.pad1em { padding:1em }
 
 /**
 backgrounds
