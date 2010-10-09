@@ -5,24 +5,21 @@ En attendant que j'organise mieux le travail ou que vous vous proposiez pour ré
 
 TODO: (vous pouvez prendre ce que vous voulez)
 - corriger les fautes d'anglais
-- mieux préciser les règles et ce que les gens peuvent faire/ne pas faire
-- rajouter un bandeau central avec marqué en grosses lettres "Zeroload and .. organizin.. 1st Prize : 2nd Prize 3rd Prize"...
 
 - Rajouter : Best sum of YSLOW, Pagespeed, [Zoompf] [DynaTrace] (si sponsors = pas de lot supplémentaire)
 --[- Rajouter best DynaTrace rank comme mesure, et essayer d'obtenir un lot pour ça/sponsor]
 --[- Rajouter best zoompf score comme mesure et essayer d'obtenir un lot pour ça/sponsor]
 
-- procédure d'inscription :
+- procédure d'inscription PHP :
 --- envoit d'un mail récapitulatif au participant
 --- modifier la BDD pour avoir des champs indiquants "logins ftp envoyés, oui/non"
 --- +1 champs "admin", dans lequel ceux qui peuvent créer des comptes FTP le feront et enverront ensuite les logins automatiquement avec un lien
 --- si non = il faut créer le dossier à la main sur le FTP et créé l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
 --- dashboard des inscriptions avec toutes les informations + "logins envoyés, oui/non"
 --- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
+--- on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
 
-on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
 
-- finalement faire une page spéciale pour demander de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
 
 - rédiger les pages en Français
 
@@ -33,7 +30,7 @@ avec l'essentiel : nom twitter + temps de la page + scores pagespeed)
 -- ensuite avec le dashboard amélioré en ajax on va récupérer le gros fichier JSON et on le traite
 s'inspirer de http://code.webpagetest.org/svn/compete/upload.php pour lancer les tests
 
--- pour YOTTAA je ne sais pas encore comment faire
+-- pour YOTTAA je ne sais pas encore comment on fera, peut etre avec leur dashboard, a voir
 
 
 DISCUSS:
@@ -41,8 +38,10 @@ DISCUSS:
 --- Perso je ne vois pas l'utilité ici par rapport aux simples sous domaines. Les tests WPT sont faits à faibles distance et tous auront les mêmes outils avec les mêmes latence. Introduire de CDN serait presque ajouter des risques de disparité supplémentaires "non gérables" (puisqu'on ne peut pas décider de où on tapera) - @edas
 --- Je parlai d'un hébergement pour notre site web a nous, webperf-planet.com, à voir.
 
-
 DONE:
+- finalement faire une page spéciale pour demander de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
+- mieux préciser les règles et ce que les gens peuvent faire/ne pas faire
+- rajouter un bandeau central avec marqué en grosses lettres "Zeroload and .. organizin.. 1st Prize : 2nd Prize 3rd Prize"...
 - enlever le nom de aaron peters des organisateurs, il sera simplement juge
 - créer une section "juges"
 - mieux préciser les règles et ce que les gens peuvent faire/ne pas faire (mais mérite encore du travail)
