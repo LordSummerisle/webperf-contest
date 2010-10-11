@@ -34,5 +34,7 @@ RewriteRule ^register.php$ /soon.html [R=302,L]
 RewriteRule ^leaderboard.html$ /soon.html [R=302,L]
 
 # without ending $ it will allow zeroload.net.local, how handyy .. :)
-#RewriteCond %{HTTP_HOST} !^zeroload\.net
-#RewriteRule (.*) http://zeroload.net/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} !^webperf-contest\.com
+# not really usefull it seems
+RewriteCond %{HTTP_HOST} !^webperf-contest\.com\.local
+RewriteRule (.*) http://webperf-contest.com/$1 [R=301,L]

@@ -127,7 +127,12 @@ Font colors
 .pointer {cursor:pointer;}
 
 .deactivate {
+	cursor:default;
 	opacity:.1;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
 	filter: alpha(opacity=10);
+}
+
+.deactivate a, .deactivate{
+	cursor:default;
 }
