@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>WebPerf contest - Get professionnal advices for speeding up your website, for free!</title>
+		<title>Webperf contest - Get professionnal advices for speeding up your website, for free!</title>
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
@@ -99,5 +99,21 @@
 			</div>
 
 		</div>
+
+		<script type="text/javascript">
+			var $soon = document && document.getElementsByClassName('deactivate');
+			if ($soon) {
+				for(var i = 0, limit = $soon.length; i < limit; i+=1) {
+					if($soon[i].tagName === 'A') {
+						$soon[i].href = '/soon.html';
+						$soon[i].onclick = function() {
+							return false;
+						}
+					} else {
+
+					}
+				}
+			}
+		</script>
 	</body>
 </html>
