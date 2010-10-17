@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Webperf contest - Leaderboard</title>
+		<title>Webperf contest - Rules</title>
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
@@ -34,7 +34,7 @@
 				<a href="http://www.yottaa.com" class="floatRight clearRight logo" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
 				<a href="http://www.alwaysdata.com/" class="floatRight clearRight logo" title="Hébergement mutualisé et dédié haute qualité"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 
-				<h1 class="sansRounded caps center classicTextShadow">
+				<h1 class="caps center classicTextShadow">
 					Webperf <span class="white">Contest</span> 2010
 				</h1>
 				<h2 class="center">Optimize a website's homepage and win some prizes</h2>
@@ -42,9 +42,9 @@
 				<nav id="menu" class="block clearfix bold caps">
 					<a href="/" title="Prizes, Sponsors, Rules">home</a>
 					<a href="be-our-website-example.html" title="Help us find a website to optimize">your website for the contest ?</a>
-					<a href="rules.html" title="Contest rules">rules</a>
+					<a href="rules.html" class="current" title="Contest rules">rules</a>
 					<a href="register.html" class="deactivate" title="Soon!">register</a>
-					<a href="leaderboard.html" class="current" title="Soon!">leaderboard</a>
+					<a href="leaderboard.html" class="deactivate" title="Soon!">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
 					<a href="about.html" title="Organizers and Sponsors">about</a>
 				</nav>
@@ -52,19 +52,45 @@
 
 			<div id="text-container">
 
-				<h1>Leaderboard</h1>
+				<h1>Rules</h1>
 
-			</div>
-		</div>
+				<ul>
+					<li>No cheating ! Displaying a big JPG for the complete website is cheating (even if you strip exif data, yes!)</li>
+					<li>No server side code (it is disabled)</li>
+					<li>User experience should not be degraded (but you are welcome to improve it), which is to say, for example:
+						<ul>
+							<li>Once page is loaded, all original features must still work</li>
+							<li>Ads, widgets or trackers must still be visible and usable</li>
+							<li>Accessibility must be preserved (also you can improve it)</li>
+							<li>SEO must be preserved (also you can improve it)</li>
+						</ul>
+					</li>
+					<li>Use our servers, you can't host files on other domains than *.webperf-contest.com</li>
+					<li>Use htaccess file to tweak your directory configuration if it does not fit your needs</li>
+					<li>CSS1-2-3, canvas, svg, JavaScript (inline, external, minified, ...), dataURIS, MHTML, defer, async, *insert crazy technique* <strong>ALLOWED</strong></li>
+				</ul>
+				
+				<p>The main rule is : <strong>Do it as it was your own website</strong>, your customers & your design. Do not ruin  everything for performance.</p>				
 
-		<script type="text/javascript">
-			var $content_nav = document.getElementById('text-nav');
-			window.onscroll = function(e) {
-				var scroll = window.pageYOffset;
-				if(scroll > 0) {
-					$content_nav.style.cssText = 'top:'+scroll+'px';
+				<p>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements (like replacing an image by some css or js code wich has a similar result), provided you respect the "user experience" rule.</p> 
+				<p>If a typical product owner would refuse your change, you may be outside the rules. <a href="http://twitter.com/webperf_contest">Ask</a> if you're really unsure, we'll also contact you if there's a problem.</p>
+				<p>The judges <strong>will have the final word</strong> on what they think is acceptable or not, espcially when two participants have very similar timings and scores.</p>
+
+</div></div>
+<script type="text/javascript">
+	var $soon = document && document.getElementsByClassName('deactivate');
+	if ($soon) {
+		for(var i = 0, limit = $soon.length; i < limit; i+=1) {
+			if($soon[i].tagName === 'A') {
+				$soon[i].href = '/soon.html';
+				$soon[i].onclick = function() {
+					return false;
 				}
+			} else {
+
 			}
-		</script>
+		}
+	}
+</script>
 	</body>
 </html>

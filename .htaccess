@@ -33,8 +33,7 @@ RewriteRule ^register.html$ /soon.html [R=302,L]
 RewriteRule ^register.php$ /soon.html [R=302,L]
 RewriteRule ^leaderboard.html$ /soon.html [R=302,L]
 
-# without ending $ it will allow zeroload.net.local, how handyy .. :)
+# without ending $ it will allow webperf-contest.com.local, how handy .. :)
 RewriteCond %{HTTP_HOST} !^webperf-contest\.com
-# not really usefull it seems
-RewriteCond %{HTTP_HOST} !^webperf-contest\.com\.local
+RewriteCond %{HTTP_HOST} !^cdn.webperf-contest\.com
 RewriteRule (.*) http://webperf-contest.com/$1 [R=301,L]

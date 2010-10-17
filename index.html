@@ -40,12 +40,13 @@
 				<h2 class="center">Optimize a website's homepage and win some prizes</h2>
 
 				<nav id="menu" class="block clearfix bold caps">
-					<a href="/" class="current">home</a>
-					<a href="be-our-website-example.html">your website for the contest ?</a>
+					<a href="/" title="Prizes, Sponsors, Rules" class="current">home</a>
+					<a href="be-our-website-example.html" title="Help us find a website to optimize">your website for the contest ?</a>
+					<a href="rules.html" title="Contest rules">rules</a>
 					<a href="register.html" class="deactivate" title="Soon!">register</a>
 					<a href="leaderboard.html" class="deactivate" title="Soon!">leaderboard</a>
-					<a href="http://twitter.com/webperf_contest">twitter</a>
-					<a href="mailto:info@webperf-contest.com" title="info@webperf-contest.com">contact</a>
+					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
+					<a href="about.html" title="Organizers and Sponsors">about</a>
 				</nav>
 			</header>
 
@@ -55,25 +56,35 @@
 					<ul>
 						<li><a href="#top">Top</a></li>
 						<li><a href="#brief">Brief</a></li>
-						<li><a href="#when">When</a></li>
-						<li><a href="#howto" title="Soon!" class="deactivate">Enter the competition</a></li>
+						<li class="hide"><a href="#when">When</a></li>
+						<li class="hide"><a href="#howto" title="Soon!" class="deactivate">Enter the competition</a></li>
 						<li><a href="#win">How to win ?</a></li>
 						<li><a href="#gifts">What to win</a></li>
-						<li><a href="#rules">Rules</a></li>
+						<li class="hide"><a href="#rules">Rules</a></li>
 						<li><a href="#partners">Sponsors</a></li>
 						<li><a href="#judges">Judges</a></li>
 						<li><a href="#people">People</a></li>
 					</ul>
 				</nav>
 
-				<div class="insetShadowBox centerBlock marg2emtb pad1em bgWhite" id="splash">
+				<div class="centerBlock pad1em" id="splash">
 					<p>
-						<img src="http://cdn.webperf-contest.com/logos/zeroload.png"/> & <img src="http://cdn.webperf-contest.com/logos/yottaa.png"/> are organizing the first web performance contest!
+						<a href="http://zeroload.net/blog" title="Web performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png"/></a> & <a href="http://www.yottaa.com" title="Web performance analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png"/></a> are organizing the first web performance contest!
 					</p>
-					<p>
-<!--						<a href="register.html" title="Register for the contest">Register</a> and try to have :-->
-						Register and try to have :
-					</p>
+					<div id="steps" class="clearfix">
+						<div class="floatLeft w25pc">
+							<p>1. <strong>Download</strong> the real world webpage example</p>
+						</div>
+						<div class="floatLeft w25pc">
+							<p>2. Do your best to <strong>make it faster</strong></p>
+						</div>
+						<div class="floatLeft w25pc">
+							<p>3. <strong>Upload it</strong> at any time to our servers</p>
+						</div>
+						<div class="floatLeft w25pc">
+							<p>4. Try to <strong>perform</strong> in one or all of the 3 categories</p>
+						</div>						
+					</div>
 
 					<ol>
 						<li>Best YOTTAA score. <strong>Win an IPAD</strong>! Courtesy of YOTTAA</li>
@@ -88,14 +99,14 @@
 						<a href="http://twitter.com/webperf_contest" title="Follow us to get latest news">see you soon</a>!</p>
 				</div>
 
-				<h3 id="brief">Brief</h3>
+				<h1 id="brief">Brief</h1>
 				<p><a href="http://zeroload.net/blog/">Zeroload</a> is organizing the first web performance contest, with the support of <a href="http://www.yottaa.com">YOTTAA</a> and <a href="http://www.alwaysdata.com/" class="logo">Alwaysdata.</a></p>
 				<p><a href="#people">We</a> are a group of web performance junkies organizing a contest like the <a href="http://js1k.com">js1k</a> competition but this time on the subject of <a href="http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/" title="Web Performance Optimization">WPO</a> (<b>W</b>eb <b>P</b>erformance <b>O</b>ptimization).</p>
 				<p>This is the first time a competition of this kind is organized (well, <a href="http://www.fastwebrace.com/">almost</a>).</p>
 				<p id="when">The contest will start the 25th October and end the 30th November.</p>
 
-				<div class="deactivate">
-					<h3 id="howto">How to enter the competition ? (soon)</h3>
+				<div class="hide">
+					<h1 id="howto">How to enter the competition ? (soon)</h1>
 					<p><a href="register.html" class="deactivate">Download the files and register</a>. The Zip contains a complete static webpage (.html) with all the required assets (js, css, backgrounds, ads) for the page to work.</p>
 					<p>Download the files and register. The Zip contains a complete static webpage (.html) with all the required assets (js, css, backgrounds, ads) for the page to work.</p>
 					<p>You will then receive <strong>a temporary FTP account</strong> on a French host (provided by our sponsor, <a href="http://www.alwaysdata.com">Alwaysdata</a>) to put your files.</p>
@@ -104,18 +115,24 @@
 					<p>If you do not want to be copied, do not share your uniqid ! We won't be responsible for that.</p>
 				</div>
 
-				<h3 id="win">How to win ?</h3>
+				<h1 id="win">How to win ?</h1>
 				<p>When the contest ends, each participant's url will be tested in multiple tools and <strong>ranked</strong> by theses categories :</p>
 				<ul>
 					<li>Best YOTTAA score</li>
 					<li>Best onload & start render</li>
 					<li>Smallest number of requests & total size</li>
 				</ul>
-				<p>Both first and second access to the page will be taken into account.</p>
-				<p>All measures will be done from a typical DSL connection (1.5Mb/s, 50ms <abbr title="Round Trip Time">RTT</abbr>), on the same server, with online analysis tools like yottaa.com, webpagetest.org (Paris location) and zoompf.com.
+				
+				<p>Measurements tools :</p>
+				<ul>
+					<li>Yottaa</li>
+					<li>WPT paris location, DSL (1.5Mb/s, 50ms <abbr title="Round Trip Time">RTT</abbr>)</li>
+				</ul>
+				
+				<p>All the participant's files will be hosted on the same location (alwaysdata servers).</p>
 				<p>You will be able to test your changes in the exact same conditions as us with, the FTP + HTTP account which will be given to you.</p>
 
-				<h3 id="gifts">What to win ?</h3>
+				<h1 id="gifts">What to win ?</h1>
 				<ul>
 					<li>An <a href="http://www.ipadd.fr/wp-content/uploads/2010/03/steve-jobs-ipad-apple-ap.jpg">IPAD</a>, generously given by our sponsor, <a href="http://www.yottaa.com">YOTTAA</a></li>
 					<li>Books</li>
@@ -126,42 +143,22 @@
 						A book, ticket for a conference, license for your software/solution ? Be our sponsor!</li>
 				</ul>
 
-				<h3 id="rules">Rules</h3>
-				<ul>
-					<li>No cheating ! Displaying a big JPG for the complete website is cheating (even if you strip exif data, yes!)</li>
-					<li>No server side code (it is disabled)</li>
-					<li>User experience should not be degraded (but you are welcome to improve it), which is to say, for example:
-						<ul>
-							<li>Once page is loaded, all original features must still work</li>
-							<li>Ads, widgets or trackers must still be visible and usable</li>
-							<li>Accessibility must be preserved (also you can improve it)</li>
-							<li>SEO must be preserved (also you can improve it)</li>
-						</ul>
-					</li>
-				</ul>
-
-				<p>Then, you can use whatever technique you want : data uris, mhtml (external, inline), script defer ...</p>
-				<p>Htaccess files will work, so use it if you have to</p>
-				<p>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements (like replacing an image by some css or js code wich has a similar result), provided you respect the "user experience" rule. The judges will have the final word on what they think is acceptable or not. </p>
-				<p>If a typical product owner would refuse your change, you may be outside the rules. <a href="http://twitter.com/webperf_contest">Ask</a> if you're really unsure, we'll also contact you if there's a problem.</p>
-				<p>CSS3 is allowed but if two people have similar times, we'll check the level of CSS3 used and if your optimizations are compatible with older browsers.</p>
-				<p>The main rule is : Do it as it was your website, your customers & your design. Do not ruin everything for performance.</p>
-
-				<h3 id="partners">Sponsors</h3>
+				<h1 id="partners">Sponsors</h1>
 				<p><a href="http://www.yottaa.com" title="Web performance analytics">YOTTAA</a> is our <strong>main sponsor</strong>. YOTTAA is providing us web performance measurements for the participants entries. Also YOTTAA is giving an IPAD to the participant that will have the best YOTTAA score.</p>
 				<p>Alwaysdata has been kind enough to host the contest and the files of each participant.</p>
 				<p>Do you want to help us and gain some buzz on your products or your event ? <a href="mailto:info@webperf-contest.com">Contact us</a> ! We welcome a licence of your product, a ticket to your event or some goodie at your name as additionnal prizes.</p>
 
-				<h3 id="judges">Judges</h3>
+				<h1 id="judges">Judges</h1>
 				<ul>
 					<li><a href="http://twitter.com/edasfr">Éric Daspet</a></li>
+					<li><a href="http://twitter.com/stoyanstefanov">Stoyan Stefanov</a></li>
 					<li><a href="http://twitter.com/theystolemynick">Jean-Pierre Vincent</a></li>
 					<li><a href="http://twitter.com/zeroload">Vincent Voyer</a></li>
 				</ul>
 
 				<p>Want to be a judge ? <a href="mailto:info@webperf-contest.com">Contact-us</a>.</p>
 
-				<h3 id="people">People involved in this project</h3>
+				<h1 id="people">People involved in this project</h1>
 				<ul>
 					<li><a href="http://twitter.com/edasfr">Éric Daspet</a></li>
 					<li><a href="http://twitter.com/theystolemynick">Jean-Pierre Vincent</a></li>

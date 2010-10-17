@@ -61,6 +61,8 @@ Text
 .font50 {font-size:390%}
 .font52 {font-size:406%}
 
+.w25pc {width:25%;}
+
 .block {display:block}
 .inlineBlock {display:inline-block} /* see support on http://www.quirksmode.org/css/display.html#inlineblock */
 .tableCell {display:table-cell}
@@ -97,6 +99,7 @@ Margins
 .marg0b {margin-bottom:0}
 .marg05em {margin:.5em}
 .marg1em {margin:1em}
+.marg1emtb {margin-top:1em;margin-bottom:1em}
 .marg2em {margin:2em}
 .marg2emtb {margin-top:2em;margin-bottom:2em}
 
