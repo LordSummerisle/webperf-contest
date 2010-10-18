@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<title>Webperf contest - WPO championship</title>
 
@@ -25,7 +25,7 @@
 		<![endif]-->
 	</head>
 	<body id="top" class="font11">
-		<div id="content-container">
+		<div id="content-container" itemscope itemtype="http://data-vocabulary.org/Event">
 
 			<header class="block" id="header">
 				<span class="floatRight">Sponsors</span>
@@ -34,13 +34,13 @@
 				<a href="http://www.yottaa.com" class="floatRight clearRight logo" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
 				<a href="http://www.alwaysdata.com/" class="floatRight clearRight logo" title="Hébergement mutualisé et dédié haute qualité"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 
-				<h1 class="caps center classicTextShadow">
+				<h1 class="caps center classicTextShadow" itemprop="summary">
 					Webperf <span class="white">Contest</span> 2010
 				</h1>
-				<h2 class="center">Optimize a website's homepage and win some prizes</h2>
+				<h2 class="center" itemprop="description">Optimize a website's homepage and win some prizes</h2>
 
 				<nav id="menu" class="block clearfix bold caps">
-					<a href="/" title="Prizes, Sponsors, Rules" class="current">home</a>
+					<a href="index.html" itemprop="url" title="Prizes, Sponsors, Rules" class="current">home</a>
 					<a href="be-our-website-example.html" title="Help us find a website to optimize">your website for the contest ?</a>
 					<a href="rules.html" title="Contest rules">rules</a>
 					<a href="register.html" class="deactivate" title="Soon!">register</a>
@@ -69,7 +69,7 @@
 
 				<div class="centerBlock pad1em" id="splash">
 					<p>
-						<a href="http://zeroload.net/blog" title="Web performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png"/></a> & <a href="http://www.yottaa.com" title="Web performance analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png"/></a> are organizing the first web performance contest!
+						<a href="http://zeroload.net/blog" title="Web performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png"/></a> & <a href="http://www.yottaa.com" title="Web performance analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png"/></a> are organizing the first web performance <span itemprop="eventType">contest</span>!
 					</p>
 					<div id="steps" class="clearfix">
 						<div class="floatLeft w25pc">
@@ -95,16 +95,16 @@
 
 					<p>When participants have similar scores or timings, manual checks will be done. Innovation and progressive rendering level will be taken into account.</p>
 
-					<p>The contest starts the <strong>25th October</strong> and ends the <strong>30th November</strong>,
+					<p>The contest starts the <strong><time datetime="2010-10-25" itemprop="startDate" >25th October</time></strong> and ends the <strong><time datetime="2010-11-30" itemprop="endDate">30th November</time></strong>,
 						<a href="http://twitter.com/webperf_contest" title="Follow us to get latest news">see you soon</a>!</p>
 				</div>
-
-				<h1 id="brief">Brief</h1>
-				<p><a href="http://zeroload.net/blog/">Zeroload</a> is organizing the first web performance contest, with the support of <a href="http://www.yottaa.com">YOTTAA</a> and <a href="http://www.alwaysdata.com/" class="logo">Alwaysdata.</a></p>
-				<p><a href="#people">We</a> are a group of web performance junkies organizing a contest like the <a href="http://js1k.com">js1k</a> competition but this time on the subject of <a href="http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/" title="Web Performance Optimization">WPO</a> (<b>W</b>eb <b>P</b>erformance <b>O</b>ptimization).</p>
-				<p>This is the first time a competition of this kind is organized (well, <a href="http://www.fastwebrace.com/">almost</a>).</p>
-				<p id="when">The contest will start the 25th October and end the 30th November.</p>
-
+				<div itemprop="description">
+					<h1 id="brief">Brief</h1>
+					<p><a href="http://zeroload.net/blog/">Zeroload</a> is organizing the first web performance contest, with the support of <a href="http://www.yottaa.com">YOTTAA</a> and <a href="http://www.alwaysdata.com/" class="logo">Alwaysdata.</a></p>
+					<p><a href="#people">We</a> are a group of web performance junkies organizing a contest like the <a href="http://js1k.com">js1k</a> competition but this time on the subject of <a href="http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/" title="Web Performance Optimization">WPO</a> (<b>W</b>eb <b>P</b>erformance <b>O</b>ptimization).</p>
+					<p>This is the first time a competition of this kind is organized (well, <a href="http://www.fastwebrace.com/">almost</a>).</p>
+					<p id="when">The contest will start the <time datetime="2010-10-25">25th October</time> and end the <time datetime="2010-11-30">30th November</time>.</p>
+				</div>
 				<div class="hide">
 					<h1 id="howto">How to enter the competition ? (soon)</h1>
 					<p><a href="register.html" class="deactivate">Download the files and register</a>. The Zip contains a complete static webpage (.html) with all the required assets (js, css, backgrounds, ads) for the page to work.</p>
@@ -152,7 +152,7 @@
 				<ul>
 					<li><a href="http://twitter.com/edasfr">Éric Daspet</a></li>
 					<li><a href="http://twitter.com/stoyanstefanov">Stoyan Stefanov</a></li>
-					<li><a href="http://twitter.com/theystolemynick">Jean-Pierre Vincent</a></li>
+					<li><a href="http://braincracking.org/a-propos/">Jean-Pierre Vincent</a></li>
 					<li><a href="http://twitter.com/zeroload">Vincent Voyer</a></li>
 				</ul>
 
@@ -161,7 +161,7 @@
 				<h1 id="people">People involved in this project</h1>
 				<ul>
 					<li><a href="http://twitter.com/edasfr">Éric Daspet</a></li>
-					<li><a href="http://twitter.com/theystolemynick">Jean-Pierre Vincent</a></li>
+					<li><a href="http://braincracking.org/a-propos/">Jean-Pierre Vincent</a></li>
 					<li><a href="http://twitter.com/zeroload">Vincent Voyer</a></li>
 				</ul>
 
