@@ -33,7 +33,7 @@ foreach($required_fields as $field) {
 	}
 }
 
-// vérifions les donnéesj, je me rends compte que j'aurai pu faire ça dès le début, j'en sais rien, pourquoi y a 1 million de fonctions dans PHP
+// vérifions les données, je me rends compte que j'aurai pu faire ça dès le début, j'en sais rien, pourquoi y a 1 million de fonctions dans PHP
 if(!filter_var($clean_fields['email'], FILTER_VALIDATE_EMAIL)) {
 	die('Error, either you have not entered <strong>a valid email</strong>, either the php filter function is sh*t');
 }
@@ -71,8 +71,10 @@ foreach($clean_fields as $value) {
 	$insert .= "'".mysql_real_escape_string($value)."',";
 }
 
+$uniqid = uniqid();
+
 // j'attaque la 74eme ligne pour faire une insertion dans une BDD, fantastique
-$insert .= "'".uniqid()."');";
+$insert .= "'".$uniqid."');";
 
 // insertion
 $query = mysql_query($insert);

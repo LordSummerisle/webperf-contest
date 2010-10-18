@@ -9,7 +9,6 @@
 		<!-- yui resets/styles must be on top, then ours -->
 		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v2">
 		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v2">
-
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-12667483-3']);
@@ -52,17 +51,39 @@
 
 			<div id="text-container">
 
-				<h3>1/ Download the example webpage</h3>
-
-				<p>Click on the big green button :</p>
+				<h3>1/ Download the real world webpage</h3>
 
 				<p class="center marg2em">
-					<a href="somezipfile.zip" id="downloadButton" class="smallCaps bold white">⇩ download</a>
+					<a href="somezipfile.zip" id="downloadButton" class="smallCaps bold white">⇩ download the webpage package</a>
 				</p>
 
 				<p>If you just want to see if you can optimize this webpage, you can play with the above page and register later, no problem.</p>
 
-				<h3 id="gist">2/ Get a Gist URL</h3>
+				<h3>2/ Register</h3>
+
+				<p>Registering will give you a <strong>unique ID</strong> that you'll have to keep secret. It will be your FTP access, and will allow us to uniquely identify you.</p>
+
+				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="clearfix insetShadowBox classicForm bgWhite" id="registerForm" method="POST">
+					<fieldset>
+						<legend>Mandatory</legend>
+						<label>Name: <input type="text" name="name" required placeholder="Your name" /></label>
+						<label>Email: <input type="email" name="email" required placeholder="my@mail.com" /></label>
+						<label>Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
+						<span class="importantBot"><input type="checkbox" name="foo" id="foo"> I agree I'm not a bot (thanks!)</span>
+					</fieldset>
+
+					<fieldset>
+						<legend>Optionnal</legend>
+						<label>Website: <span class="font09">(full url)</span> <input type="url" name="website" /></label>
+						<label>Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
+						<label>Preferred language: <select name="language"><option>English</option><option>French</option></select></label>
+						<span class="importantBot"><input type="checkbox" name="bar" id="bar"> No, I'm a robot come to spam you</span>
+					</fieldset>
+
+					<input type="submit" class="block centerBlock clearLeft" value="Register for the contest"/>
+				</form>
+				
+				<h3 id="gist">3/ Get a Gist URL</h3>
 				<p>You have to :</p>
 				<ol>
 					<li><strong><a href="http://gist.github.com" target="_blank">create a <strong>private</strong> gist</a></strong></li>
@@ -77,35 +98,8 @@
 				<p>This list of modifications will help us when judging :</p>
 				<ul>
 					<li>to settle candidates with very close times / sizes ( &lt; 30ms, &lt; 5kb)</li>
-					<li>to attribute the "innovation" award</li>
+					<li>to detect potential cheaters</li>
 				</ul>
-
-
-				<h3>3/ Register</h3>
-
-				<p>Registering will give you a <strong>unique ID</strong> that you'll have to keep secret. It will be your FTP access, and will allow us to uniquely identify you.</p>
-
-				<p><strong>Fill in the form</strong> if you want to proceed.</p>
-
-				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="insetShadowBox classicForm bgWhite" id="registerForm" method="POST">
-					<fieldset>
-						<legend>Mandatory</legend>
-						<label>Name: <input type="text" name="name" required placeholder="Your name" /></label>
-						<label>Email: <input type="email" name="email" required placeholder="my@mail.com" /></label>
-						<label>Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
-						<span class="importantBot"><input type="checkbox" name="foo" id="foo"> I agree I'm not a bot (thanks!)</span>
-					</fieldset>
-
-					<fieldset>
-						<legend>Optionnal</legend>
-						<label>Website: <input type="url" name="website" /></label>
-						<label>Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
-						<span class="importantBot"><input type="checkbox" name="bar" id="bar"> No, I'm a robot come to spam you</span>
-					</fieldset>
-
-					<input type="submit" value="Register for the contest"/>
-				</form>
-
 
 				<h3>4/ Do your best</h3>
 

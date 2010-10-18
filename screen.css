@@ -163,7 +163,13 @@ Register
 }
 
 .classicForm {
-	width:50%;
+	width:80%;
+}
+
+.classicForm fieldset {
+	width:40%;
+	margin-right:3%;
+	float:left;
 }
 
 .classicForm legend {
@@ -190,8 +196,7 @@ Register
 #registerForm {
 	font-size:120%;
 	background:#fff;
-	margin:0 auto;
-	padding:2%;
+	margin:0 auto;	
 }
 
 .insetShadowBox {
