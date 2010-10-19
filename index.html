@@ -28,11 +28,23 @@
 		<div id="content-container" itemscope itemtype="http://data-vocabulary.org/Event">
 
 			<header class="block" id="header">
-				<span class="floatRight">Sponsors</span>
-
-				<a href="http://zeroload.net/blog/" class="floatRight clearRight logo" alt="Contest owner" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
-				<a href="http://www.yottaa.com" class="floatRight clearRight logo" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
-				<a href="http://www.alwaysdata.com/" class="floatRight clearRight logo" title="Hébergement mutualisé et dédié haute qualité"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+				<div class="floatRight marg1eml">
+					Language
+					<br/><a lang="fr" title="Passer en langue française" href="index-fr.html"><img src="http://cdn.webperf-contest.com/fr.png" alt="Français" /></a>
+				</div>
+				<div class="floatRight sponsors">
+					<div class="floatLeft marg1emr">
+						<strong>Gold sponsors</strong>
+						<a href="http://zeroload.net/blog/" alt="Contest owner" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+					</div>
+					<div class="floatLeft">
+						<span>Silver sponsor</span>
+						<a href="http://www.catchpoint.com/" alt="Silver sponsor" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint.png" alt="Catchpoint Systems" /></a>
+					</div>
+				</div>
+				
 
 				<h1 class="caps center classicTextShadow" itemprop="summary">
 					Webperf <span class="white">Contest</span> 2010
@@ -61,14 +73,14 @@
 						<li><a href="#win">How to win ?</a></li>
 						<li><a href="#gifts">What to win</a></li>
 						<li class="hide"><a href="#rules">Rules</a></li>
-						<li><a href="#partners">Sponsors</a></li>
+<!--						<li><a href="#partners">Sponsors</a></li>-->
 						<li><a href="#judges">Judges</a></li>
 						<li><a href="#people">People</a></li>
 					</ul>
 				</nav>
 
-				<div class="centerBlock pad1em" id="splash">
-					<p>
+				<div class="centerBlock pad1em font15" id="splash">
+					<p class="bold">
 						<a href="http://zeroload.net/blog" title="Web performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png"/></a> & <a href="http://www.yottaa.com" title="Web performance analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png"/></a> are organizing the first web performance <span itemprop="eventType">contest</span>!
 					</p>
 					<div id="steps" class="clearfix">
@@ -87,10 +99,13 @@
 					</div>
 
 					<ol>
-						<li>Best YOTTAA score. <strong>Win an IPAD</strong>! Courtesy of YOTTAA</li>
+						<li>Best YOTTAA score. <strong>Win an IPAD</strong>, courtesy of <a href="http://www.yottaa.com">YOTTAA</a></li>
 						<li>Best <a href="https://developer.mozilla.org/en/DOM/window.onload#Notes" title="Onload event description">onload</a> &
-							<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a>. Prizes to be decided</li>
-						<li>Smallest number of requests & total size. Prizes to be decided</li>
+							<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a> times. 
+							<strong>Win an iPod touch</strong>,
+							courtesy of <a href="http://www.catchpoint.com/" title="Web performance monitoring">Catchpoint Systems</a></li>
+						<li>Smallest number of requests & total size.
+							Win <strong>signed books</strong> from <a href="http://phpied.com" title="Web performance blog">Stoyan Stefanov</a></li>
 					</ol>
 
 					<p>When participants have similar scores or timings, manual checks will be done. Innovation and progressive rendering level will be taken into account.</p>
@@ -99,7 +114,7 @@
 						<a href="http://twitter.com/webperf_contest" title="Follow us to get latest news">see you soon</a>!</p>
 				</div>
 				<div itemprop="description">
-					<h1 id="brief">Brief</h1>
+					<h1 class="marg0t" id="brief">Brief</h1>
 					<p><a href="http://zeroload.net/blog/">Zeroload</a> is organizing the first web performance contest, with the support of <a href="http://www.yottaa.com">YOTTAA</a> and <a href="http://www.alwaysdata.com/" class="logo">Alwaysdata.</a></p>
 					<p><a href="#people">We</a> are a group of web performance junkies organizing a contest like the <a href="http://js1k.com">js1k</a> competition but this time on the subject of <a href="http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/" title="Web Performance Optimization">WPO</a> (<b>W</b>eb <b>P</b>erformance <b>O</b>ptimization).</p>
 					<p>This is the first time a competition of this kind is organized (well, <a href="http://www.fastwebrace.com/">almost</a>).</p>
@@ -119,7 +134,7 @@
 				<p>When the contest ends, each participant's url will be tested in multiple tools and <strong>ranked</strong> by theses categories :</p>
 				<ul>
 					<li>Best YOTTAA score</li>
-					<li>Best onload & start render</li>
+					<li>Best onload & start render times</li>
 					<li>Smallest number of requests & total size</li>
 				</ul>
 				
@@ -134,19 +149,26 @@
 
 				<h1 id="gifts">What to win ?</h1>
 				<ul>
-					<li>An <a href="http://www.ipadd.fr/wp-content/uploads/2010/03/steve-jobs-ipad-apple-ap.jpg">IPAD</a>, generously given by our sponsor, <a href="http://www.yottaa.com">YOTTAA</a></li>
-					<li>Books</li>
+					<li>An <a href="http://www.ipadd.fr/wp-content/uploads/2010/03/steve-jobs-ipad-apple-ap.jpg">iPad</a>, generously given by <a href="http://www.yottaa.com">YOTTAA</a></li>
+					<li>An <a href="http://yucentrik.ca/wp-content/uploads/2009/01/ipod-touch-26.jpg">iPod touch</a>, generously given by <a href="http://www.catchpoint.com/">Catchpoint Systems</a></li>
+					<li>Three ebooks of <a href="http://www.amazon.fr/gp/product/0596155131?ie=UTF8&tag=httpvincentvo-21&linkCode=as2&camp=1642&creative=19458&creativeASIN=0596155131">Complete Web Monitoring</a><img src="http://www.assoc-amazon.fr/e/ir?t=httpvincentvo-21&l=as2&o=8&a=0596155131" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />,
+						 generously given by <a href="http://www.catchpoint.com/">Catchpoint Systems</a>.</li>
+					<li>Three books signed by <a href="http://www.phpied.com" title="Blog de Stoyan Stefanov">Stoyan Stefanov</a> :
+						<a href="http://www.amazon.fr/gp/product/0596806752?ie=UTF8&tag=httpvincentvo-21&linkCode=as2&camp=1642&creative=19458&creativeASIN=0596806752">JavaScript Patterns</a><img src="http://www.assoc-amazon.fr/e/ir?t=httpvincentvo-21&l=as2&o=8&a=0596806752" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />,
+						<a href="http://www.amazon.fr/gp/product/0596522304?ie=UTF8&tag=httpvincentvo-21&linkCode=as2&camp=1642&creative=19458&creativeASIN=0596522304">Even Faster Web Sites</a><img src="http://www.assoc-amazon.fr/e/ir?t=httpvincentvo-21&l=as2&o=8&a=0596522304" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />,
+						<a href="http://www.amazon.fr/gp/product/0596529309?ie=UTF8&tag=httpvincentvo-21&linkCode=as2&camp=1642&creative=19458&creativeASIN=0596529309">High performance web Sites</a><img src="http://www.assoc-amazon.fr/e/ir?t=httpvincentvo-21&l=as2&o=8&a=0596529309" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> (one of each).
 					<li>Fame!</li>
 					<li>Performance skills</li>
 					<li>Self accomplishement</li>
-					<li>Want to <a href="mailto:info@webperf-contest.com">give something else</a> ? 
-						A book, ticket for a conference, license for your software/solution ? Be our sponsor!</li>
+<!--					<li>Want to <a href="mailto:info@webperf-contest.com">give something else</a> ?
+						A book, ticket for a conference, license for your software/solution ? Be our sponsor!</li>-->
 				</ul>
 
-				<h1 id="partners">Sponsors</h1>
+<!--				<h1 id="partners">Sponsors</h1>
 				<p><a href="http://www.yottaa.com" title="Web performance analytics">YOTTAA</a> is our <strong>main sponsor</strong>. YOTTAA is providing us web performance measurements for the participants entries. Also YOTTAA is giving an IPAD to the participant that will have the best YOTTAA score.</p>
-				<p>Alwaysdata has been kind enough to host the contest and the files of each participant.</p>
-				<p>Do you want to help us and gain some buzz on your products or your event ? <a href="mailto:info@webperf-contest.com">Contact us</a> ! We welcome a licence of your product, a ticket to your event or some goodie at your name as additionnal prizes.</p>
+				<p>Alwaysdata has been kind enough to host the files for each participant.</p>-->
+
+<!--				<p>Do you want to help us and gain some buzz on your products or your event ? <a href="mailto:info@webperf-contest.com">Contact us</a> ! We welcome a licence of your product, a ticket to your event or some goodie at your name as additionnal prizes.</p>-->
 
 				<h1 id="judges">Judges</h1>
 				<ul>
@@ -155,8 +177,6 @@
 					<li><a href="http://braincracking.org/a-propos/">Jean-Pierre Vincent</a></li>
 					<li><a href="http://twitter.com/zeroload">Vincent Voyer</a></li>
 				</ul>
-
-				<p>Want to be a judge ? <a href="mailto:info@webperf-contest.com">Contact-us</a>.</p>
 
 				<h1 id="people">People involved in this project</h1>
 				<ul>
