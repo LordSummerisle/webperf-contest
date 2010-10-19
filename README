@@ -19,13 +19,10 @@ TODO:
 -- et faire toute autre tâche d'administration nécessaire (voir gdoc hébergement)
 -- pour les modifications DNS, vous pouvez toujours venir me demander par messagerie pour que je les fasse
 
-- améliorer la page d'inscription
--- mettre en avant le formulaire + le téléchargement
-
 - Dashboard d'administration
--- si non = il faut créer le dossier à la main sur le FTP et créer l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
---- dashboard d'administration des inscriptions avec toutes les informations + "logins envoyés, oui/non"
---- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
+-- dashboard d'administration des inscriptions avec toutes les informations + "logins envoyés, oui/non"
+--- si non = il faut créer le dossier à la main sur le FTP et créer l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
+-- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
 --- on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
 
 Tâches vincent voyer: (si vous souhaitez les faire alors venir me demander par messagerie ou autre)
@@ -49,6 +46,8 @@ s'inspirer de http://code.webpagetest.org/svn/compete/upload.php pour lancer les
 
 
 DONE:
+- améliorer la page d'inscription
+-- mettre en avant le formulaire + le téléchargement
 - finalement faire une page spéciale pour demander de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
 - mieux préciser les règles et ce que les gens peuvent faire/ne pas faire
 - rajouter un bandeau central avec marqué en grosses lettres "Zeroload and .. organizin.. 1st Prize : 2nd Prize 3rd Prize"...

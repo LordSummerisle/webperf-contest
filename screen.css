@@ -4,7 +4,7 @@ html {
 }
 
 html, body {
-/*	backgroundd:#121669;*/
+	/*	backgroundd:#121669;*/
 }
 
 body {
@@ -95,7 +95,7 @@ body {
 }
 
 p {
-/*	text-align:justify;*/
+	/*	text-align:justify;*/
 }
 
 ul li {
@@ -162,22 +162,21 @@ Register
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* ie */
 }
 
-.classicForm {
-	width:80%;
+#registerForm {
+	border-radius:.5em;
+	-moz-border-radius:.5em;
+	-webkit-border-radius:.5em;
+	width:70%;
+	font-size:120%;
+	margin:0 auto;
 }
 
-.classicForm fieldset {
-	width:40%;
-	margin-right:3%;
-	float:left;
-}
-
-.classicForm legend {
+#registerForm legend {
 	font-weight:bold;
 	margin:1%;
 }
 
-.classicForm label {
+#registerForm label {
 	display:block;
 	width:75%;
 	overflow:hidden;
@@ -185,25 +184,40 @@ Register
 	padding:0 0 0 2%;
 }
 
-.classicForm label input {
+#registerForm label input {
 	width:95%;
 }
 
-.classicForm input:invalid {
-	border-color:red;
+#registerForm fieldset {
+	width:49%;
+	float:left;
 }
 
-#registerForm {
-	font-size:120%;
-	background:#fff;
-	margin:0 auto;	
+#registerForm fieldset+fieldset {
+	margin-left:2%;
 }
 
-.insetShadowBox {
-/*	-moz-border-radius:5px;
+#registerButton {
+	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
-	-moz-box-shadow:inset 0 0 10px #999;
-	-webkit-box-shadow:inset 0 0 10px #999;*/
+	border-radius:5px;
+	padding:.5em 1em;
+	text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25);
+	font-weight:bold;
+	border:1px solid grey;
+	cursor:pointer;
+	color:white;
+	background: #b5bdc8; /* old browsers */
+	background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5bdc8), color-stop(36%,#828c95), color-stop(100%,#28343b)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* ie */
+}
+
+#registerButton:hover {
+	background: #E3F9F2; /* old browsers */
+	background: -moz-linear-gradient(top, #E3F9F2 0%, #BACCD3 36%, #28343b 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3F9F2), color-stop(36%,#BACCD3), color-stop(100%,#28343b)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E3F9F2', endColorstr='#28343b',GradientType=0 ); /* ie */
 }
 
 .importantBot{display:none}
@@ -241,12 +255,13 @@ Register
 }
 
 #steps p {
-	background:#efffef;
 	border-radius:.5em;
 	-moz-border-radius:.5em;
 	-webkit-border-radius:.5em;
 	padding:1em .5em;
 	margin-left:1em;
 	font-size:80%;
+	line-height:1.5em;
+	min-height:3em;
 }
 

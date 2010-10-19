@@ -67,10 +67,13 @@ if (!$link) {
 
 $insert = "insert into participant values (";
 
+//utiliser gmdate() pour l'enregistrement de la date d'inscription
+
 foreach($clean_fields as $value) {
 	$insert .= "'".mysql_real_escape_string($value)."',";
 }
 
+// on sauvegarde l'uniqid pour envoit du mail
 $uniqid = uniqid();
 
 // j'attaque la 74eme ligne pour faire une insertion dans une BDD, fantastique

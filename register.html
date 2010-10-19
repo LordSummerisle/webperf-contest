@@ -63,12 +63,12 @@
 
 				<p>Registering will give you a <strong>unique ID</strong> that you'll have to keep secret. It will be your FTP access, and will allow us to uniquely identify you.</p>
 
-				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="clearfix insetShadowBox classicForm bgWhite" id="registerForm" method="POST">
+				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="clearfix pad1em bgGreen" id="registerForm" method="POST">
 					<fieldset>
 						<legend>Mandatory</legend>
 						<label>Name: <input type="text" name="name" required placeholder="Your name" /></label>
 						<label>Email: <input type="email" name="email" required placeholder="my@mail.com" /></label>
-						<label>Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
+						<label>Gist url: <a href="#gist" class="font09">(see 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/{yourid}" /></label>
 						<span class="importantBot"><input type="checkbox" name="foo" id="foo"> I agree I'm not a bot (thanks!)</span>
 					</fieldset>
 
@@ -76,11 +76,11 @@
 						<legend>Optionnal</legend>
 						<label>Website: <span class="font09">(full url)</span> <input type="url" name="website" /></label>
 						<label>Twitter: <span class="font09">(username)</span> <input type="text" name="twitter" /></label>
-						<label>Preferred language: <select name="language"><option>English</option><option>French</option></select></label>
+						<label>Preferred language: <br/><select name="language"><option value="eng">English</option><option value="fra">French</option></select></label>
 						<span class="importantBot"><input type="checkbox" name="bar" id="bar"> No, I'm a robot come to spam you</span>
 					</fieldset>
 
-					<input type="submit" class="block centerBlock clearLeft" value="Register for the contest"/>
+					<input type="submit" id="registerButton" class="block clearLeft" value="Register for the contest"/>
 				</form>
 				
 				<h3 id="gist">3/ Get a Gist URL</h3>
