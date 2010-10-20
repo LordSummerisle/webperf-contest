@@ -29,9 +29,9 @@ ExpiresByType application/atom+xml "access plus 30 minutes"
 RewriteEngine on
 
 # Redirection des pages lorsque le site est en prod, merci de ne pas commiter ce fichier avec les lignes commentées..
-#RewriteRule ^register.html$ /soon.html [R=302,L]
-#RewriteRule ^register.php$ /soon.html [R=302,L]
-#RewriteRule ^leaderboard.html$ /soon.html [R=302,L]
+RewriteRule ^register.html$ /soon.html [R=302,L]
+RewriteRule ^register.php$ /soon.html [R=302,L]
+RewriteRule ^leaderboard.html$ /soon.html [R=302,L]
 
 # without ending $ it will allow webperf-contest.com.local, how handy .. :)
 RewriteCond %{HTTP_HOST} !^webperf-contest\.com
