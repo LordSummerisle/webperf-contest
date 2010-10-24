@@ -7,12 +7,12 @@
 
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
 		<!-- yui resets/styles must be on top, then ours -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v3">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v3">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v4">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v4">
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-12667483-3']);
-			_gaq.push(['_trackPageview']);
+			_gaq.push(['_trackPageview']);_gaq.push(['_setDomainName', 'webperf-contest.com']);
 			(function() {
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -40,7 +40,8 @@
 					</div>
 					<div class="floatLeft">
 						<span>Silver sponsor</span>
-						<a href="http://www.catchpoint.com/" alt="Sponsor secondaire" title="Suivi de performance web"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.catchpoint.com/" title="Suivi de performance web"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
 					</div>
 				</div>
 
@@ -51,10 +52,10 @@
 
 				<nav id="menu" class="block clearfix bold caps">
 					<a href="index-fr.html" title="Prizes, Sponsors, Rules">Accueil</a>
-					<a href="be-our-website-example-fr.html" title="Aidez nous à trouver un site à optimiser">Pourquoi pas votre site ?</a>
+					<a href="news-fr.html" title="Acualités du concours">Actualités</a>
 					<a href="rules-fr.html" title="Règles du concours">Règlement</a>
-					<a href="register-fr.html" class="current deactivate" title="Bientôt!">Inscription</a>
-					<a href="leaderboard-fr.html" class="deactivate" title="Bientôt!">Classement</a>
+					<a href="register-fr.html" class="current" title="Formulaire d'inscription">Inscription</a>
+					<a href="leaderboard-fr.html" class="hide deactivate" title="Bientôt!">Classement</a>
 					<a href="http://twitter.com/webperf_contest" title="Suivez l'actualité du concours sur Twitter">Twitter</a>
 					<a href="about-fr.html" title="Qui organise, qui sponsorise ?">À propos</a>
 				</nav>
@@ -62,22 +63,22 @@
 
 			<div id="text-container">
 				
-				<h3>1/ Récupérez la page</h3>
+				<h3>1/ Téléchargez la page web</h3>
 
 				<p class="center marg2em">
-					<a href="somezipfile.zip" id="downloadButton" class="smallCaps bold white">⇩ Téléchargez l'archive de la page</a>
+					<a href="http://cdn.webperf-contest.com/webpage.zip" id="downloadButton" class="smallCaps bold white">⇩ téléchargez la page web</a>
 				</p>
-				
-				<p>Si vous voulez juste voir si vous êtes capable d'optimiser cette page, vous pouvez déjà triturer les fichiers de cette archive et revenir vous enregistrer plus tard, ça n'est pas un problème.</p>
 
+				<p>Dans ce fichier compressé se trouve l'ensemble des ressources nécessaires pour participer au concours : les fichiers html, css, js et les images.</p>
+				
 				<h3>2/ Inscrivez vous</h3>
 				
 				<p>Avec l'inscription, vous obtiendrez un <strong>identifiant unique</strong> qu'il vous faudra bien sur tenir secret. Non seulement cela sera votre accès FTP mais cela nous permettra de vous identifier.</p>
 				
-				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="clearfix insetShadowBox classicForm bgWhite" id="registerForm" method="POST">
+				<form onsubmit="document.getElementById('foo').checked = true;" action="register.php" class="clearfix pad1em bgGreen" id="registerForm" method="POST">
 					<fieldset>
-						<legend>Obligatoires</legend>
-						<label>Nome: <input type="text" name="name" required placeholder="Votre nome" /></label>
+						<legend>Requis</legend>
+						<label>Prénom/Nom: <input type="text" name="name" required placeholder="Votre nom" /></label>
 						<label>Email: <input type="email" name="email" required placeholder="mon@email.com" /></label>
 						<label>URL du Gist: <a href="#gist" class="font09">(Voir 3/)</a> <input type="url" name="gist" required value="http://gist.github.com/" /></label>
 						<span class="importantBot"><input type="checkbox" name="foo" id="foo">Je confirme être humain (merci!)</span>
@@ -87,23 +88,25 @@
 						<legend>Optionnel</legend>
 						<label>Votre site: <span class="font09">(adresse complète)</span> <input type="url" name="website" /></label>
 						<label>Twitter: <span class="font09">(compte)</span> <input type="text" name="twitter" /></label>
-						<label>Langue préférée: <select name="language"><option>Français</option><option lang="en">English</option></select></label>
+						<label>Langue préférée: <select name="language"><option value="fra">Français</option><option value="eng" lang="en">English</option></select></label>
 						<span class="importantBot"><input type="checkbox" name="bar" id="bar"> Non, je ne suis pas un robot venu vous spamer</span>
 					</fieldset>
 
-					<input type="submit" class="block centerBlock clearLeft" value="Je m'inscris !"/>
+					<input type="submit" id="registerButton" class="block clearLeft" value="Valider mon inscription"/>
 				</form>
 				
-				<h3 id="gist">3/ Récupérez un Gist</h3>
+				<h3 id="gist">3/ Créez un gist privée</h3>
+
+				<p>Un <strong>gist</strong> est une sorte de post-it en ligne que vous pouvez partagez.</p>
+
 				<p>Vous devez :</p>
 				<ol>
-					<li><strong><a href="http://gist.github.com" target="_blank">créer un Gist <strong>privé</strong></a></strong></li>
-					<li>y écrire votre nom</li>
-					<li>nous donner l'url complète dans le formulaire d'inscription</li>
+					<li><strong><a href="http://gist.github.com" target="_blank">créer un Gist <strong>privé</strong></a></strong> (aucun enregistrement requis)</li>
+					<li>Nommez le de cette façon : webperfcontest2010-nom</li>
+					<li>Cliquez sur "create private gist"</li>
+					<li>Copiez collez l'url générée dans le formulaire d'inscription</li>
 				</ol>
 
-				<p><a href="http://gist.github.com" target="_blank">Gist</a> est un service gratuit de <a href="http://www.github.com" target="_blank">Github</a>. Les Gists permettent de partager facilement du code ou du texte en ligne. Il n'est pas nécessaire d'être inscrit à Github pour utiliser ce service.</p>
-				
 				<p>Pendant le concours, prenez bien note de toutes vos modifications dans ce Gist.</p>
 				
 				<p>Cette liste de modifications aidera les juges :</p>
@@ -112,7 +115,9 @@
 					<li>à repérer d'éventuels tricheurs qui n'auraient fait que du copier/coller</li>
 				</ul>
 
-				<h3>4/ Soyez le meilleur !</h3>
+				<p><a href="http://gist.github.com" target="_blank">Gist</a> est un service gratuit de <a href="http://www.github.com" target="_blank">Github</a>. Les Gists permettent de partager facilement du code ou du texte en ligne. Il n'est pas nécessaire d'être inscrit à Github pour utiliser ce service.</p>
+
+				<h3>4/ Faites de votre mieux</h3>
 				<p>Vous recevrez votre compte FTP ce soir ou demain. D'ici là, vous pouvez déjà commencer à modifier les fichiers en les testant de votre côté sur votre machine de développement.</p>
 				<p>Souvenez vous que l'hébergement est en France et que les temps seront constatés depuis la France. Il est donc valable de développer sur sa propre machine puis d'envoyer les modifications par FTP pour test lorsque vous avez quelque chose d'intéressant.</p>
 				<p>Enfin, si vous modifiez le HTML, le CSS ou le JavaScript, <strong>fournissez nous les sources modifiées</strong> avant minification, afin que nous puissions départager les meilleurs : <strong>créez un répertoire "source"</strong> et mettez y ces fichiers, cela sera suffisant.</p>

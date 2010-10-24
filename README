@@ -1,23 +1,9 @@
-Ce repo représente le site web qui tourne sur http://preview.webperf-contest.com
+Ce repo représente le site web qui tourne sur http://webperf-contest.com
 
 Si vous créez de nouveaux fichiers ou bien si vous souhaitez réaliser une tâche, merci de l'indiquer quelque part afin qu'on ne fasse pas deux fois la même chose !
 En attendant que j'organise mieux le travail ou que vous vous proposiez pour réaliser une des tâches.
 
 TODO:
-- corriger les fautes d'anglais
-- rédiger les pages en Français
-
-- configurer le serveur alwaysdata
--- lier s1.webperf-contest.com au rep X (rep participants)
--- lier s2.webperf-contest.com au rep X (rep participants)
--- lier entries.webperf-contest.com au rep X (rep participants)
--- lier ads.webperf-contest.com au rep Y
--- configurer salement le rep participants avec un .htaccess à la racine
---- mauvaise compression gzip
---- activation des ETAGS
---- désactivation des expires
--- et faire toute autre tâche d'administration nécessaire (voir gdoc hébergement)
--- pour les modifications DNS, vous pouvez toujours venir me demander par messagerie pour que je les fasse
 
 - Dashboard d'administration
 -- dashboard d'administration des inscriptions avec toutes les informations + "logins envoyés, oui/non"
@@ -26,15 +12,12 @@ TODO:
 --- on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
 
 Tâches vincent voyer: (si vous souhaitez les faire alors venir me demander par messagerie ou autre)
+- ajouter un crédit à Anne Sophie pour la traduction
 - Procédure d'inscription
 -- envoit d'un mail récapitulatif au participant, avec son uniqid et la mention "vous recevrez vos identifiants bientôt"
 -- modifier la BDD pour avoir des champs indiquants "logins ftp envoyés, oui/non"
 -- +1 champs "responsable", on désigne qui est le responsable pour l'inscription et la création des comptes FTP (comme ça pas de doublon d'envoi ..)
 -- création de la BDD sur le serveur zeroload
-
-- indiquer les cadeaux de stoyan
-- rajouter le nouveau sponsor
--- faire une partie sponsor gold et silver
 
 - dashboard (leaderboard) public/admin
 -- lancer automatiquement des tests WPT toutes les 2heures et enregistrer les résultats dans des fichiers JSON (deux séparés, l'un avec toutes les données = admin, l'autre avec l'essentiel : nom, (twitter) + temps de la page + nb req etc)
@@ -46,6 +29,14 @@ s'inspirer de http://code.webpagetest.org/svn/compete/upload.php pour lancer les
 
 
 DONE:
+- configurer le serveur alwaysdata
+-- lier s1.webperf-contest.com au rep X (rep participants)
+-- lier s2.webperf-contest.com au rep X (rep participants)
+-- lier entries.webperf-contest.com au rep X (rep participants)
+-- lier ads.webperf-contest.com au rep Y (pas besoin de ads)
+-- configurer salement le rep participants avec un .htaccess à la racine
+- corriger les fautes d'anglais
+- rédiger les pages en Français
 - améliorer la page d'inscription
 -- mettre en avant le formulaire + le téléchargement
 - finalement faire une page spéciale pour demander de nouveaux sites web, vu qu'il est difficile de lire la phrase une fois qu'on clique (ancre + bas de page = invisible)
@@ -62,3 +53,11 @@ DONE:
 - faire (et lier) un formulaire pour l'inscription (voir gdoc "procédure inscription")
 --- Fait un formulaire + script php qui réalisent l'insertion dans une BDD des données essentielles, j'ai aussi modifié un peu la procédure d'inscription pour pas que les gens aient à revenir
 préciser les modifications qu'ils ont faites (voir gist sur le formulaire)
+- impossible à faire car on ne peut faire passer un site web pour plus mauvais qu'il l'est, peut etre pour une autre année, a voir avec le site web en question :
+	- mauvaise compression gzip
+	- activation des ETAGS
+	- désactivation des expires
+	- et faire toute autre tâche d'administration nécessaire (voir gdoc hébergement)*
+- indiquer les cadeaux de stoyan
+- rajouter le nouveau sponsor
+-- faire une partie sponsor gold et silver

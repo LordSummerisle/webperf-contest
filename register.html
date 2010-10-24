@@ -7,12 +7,12 @@
 
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
 		<!-- yui resets/styles must be on top, then ours -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v3">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v3">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v4">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v4">
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-12667483-3']);
-			_gaq.push(['_trackPageview']);
+			_gaq.push(['_trackPageview']);_gaq.push(['_setDomainName', 'webperf-contest.com']);
 			(function() {
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -34,13 +34,14 @@
 				<div class="floatRight sponsors">
 					<div class="floatLeft marg1emr">
 						<strong>Gold sponsors</strong>
-						<a href="http://zeroload.net/blog/" alt="Contest owner" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
-						<a href="http://www.yottaa.com" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
 						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 					</div>
 					<div class="floatLeft">
 						<span>Silver sponsor</span>
-						<a href="http://www.catchpoint.com/" alt="Silver sponsor" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
 					</div>
 				</div>
 
@@ -51,10 +52,10 @@
 
 				<nav id="menu" class="block clearfix bold caps">
 					<a href="/" title="Prizes, Sponsors, Rules">home</a>
-					<a href="be-our-website-example.html" title="Help us find a website to optimize">your website for the contest ?</a>
+					<a href="news.html" title="Contest news">news</a>
 					<a href="rules.html" title="Contest rules">rules</a>
-					<a href="register.html" class="current" title="Soon!">register</a>
-					<a href="leaderboard.html" class="deactivate" title="Soon!">leaderboard</a>
+					<a href="register.html" class="current" title="Register for the contest">register</a>
+					<a href="leaderboard.html" class="hide deactivate" title="Soon!">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
 					<a href="about.html" title="Organizers and Sponsors">about</a>
 				</nav>
@@ -62,13 +63,12 @@
 
 			<div id="text-container">
 
-				<h3>1/ Download the real world webpage</h3>
-
+				<h3>1/ Download the webpage package</h3>
 				<p class="center marg2em">
-					<a href="somezipfile.zip" id="downloadButton" class="smallCaps bold white">⇩ download the webpage package</a>
+					<a href="http://cdn.webperf-contest.com/webpage.zip" id="downloadButton" class="smallCaps bold white">⇩ download the webpage package</a>
 				</p>
 
-				<p>If you just want to see if you can optimize this webpage, you can play with the above page and register later, no problem.</p>
+				<p>The package contains all the required resources to participate in the contest : html, css, js files and images.</p>
 
 				<h3>2/ Register</h3>
 
@@ -94,15 +94,17 @@
 					<input type="submit" id="registerButton" class="block clearLeft" value="Register for the contest"/>
 				</form>
 				
-				<h3 id="gist">3/ Get a Gist URL</h3>
+				<h3 id="gist">3/ Get a private Gist URL</h3>
+
+				<p>A <strong>gist</strong> is a sort of post-it note that you can share, share it with us!</p>
+
 				<p>You have to :</p>
 				<ol>
-					<li><strong><a href="http://gist.github.com" target="_blank">create a <strong>private</strong> gist</a></strong></li>
-					<li>write your name in it</li>
-					<li>give us the full url (in the register form)</li>
+					<li><strong><a href="http://gist.github.com" target="_blank">create a <strong>private</strong> gist</a></strong> (no login required)</li>
+					<li>Name it like this : webperfcontest2010-name</li>
+					<li>Clic on "create private gist"</li>
+					<li>Copy paste the generated url in the register form</li>
 				</ol>
-
-				<p><a href="http://gist.github.com" target="_blank">Gist</a> is a free service of <a href="http://www.github.com" target="_blank">Github</a>, gists are small pieces of text/code that you can share with people easily. You dont have to register to Github to use it, dont worry</p>
 
 				<p>During the contest, while modifying the sources, note in this Gist all the modifications you are doing.</p>
 
@@ -111,6 +113,8 @@
 					<li>to settle candidates with very close times / sizes ( &lt; 30ms, &lt; 5kb)</li>
 					<li>to detect potential cheaters</li>
 				</ul>
+
+				<p><a href="http://gist.github.com" target="_blank">Gist</a> is a free service of <a href="http://www.github.com" target="_blank">Github</a>, gists are small pieces of text/code that you can share with people easily. You dont have to register to Github to use it, dont worry</p>
 
 				<h3>4/ Do your best</h3>
 

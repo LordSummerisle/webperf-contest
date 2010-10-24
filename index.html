@@ -7,13 +7,13 @@
 
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
 		<!-- yui resets/styles must be on top, then ours -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v3">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v3">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v4">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v4">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-12667483-3']);
-			_gaq.push(['_trackPageview']);
+			_gaq.push(['_trackPageview']);_gaq.push(['_setDomainName', 'webperf-contest.com']);
 			(function() {
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -35,16 +35,17 @@
 				<div class="floatRight sponsors">
 					<div class="floatLeft marg1emr">
 						<strong>Gold sponsors</strong>
-						<a href="http://zeroload.net/blog/" alt="Contest owner" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
-						<a href="http://www.yottaa.com" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
 						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 					</div>
 					<div class="floatLeft">
 						<span>Silver sponsor</span>
-						<a href="http://www.catchpoint.com/" alt="Silver sponsor" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
 					</div>
 				</div>
-				
+
 
 				<h1 class="caps center classicTextShadow" itemprop="summary">
 					Webperf <span class="white">Contest</span> 2010
@@ -53,10 +54,10 @@
 
 				<nav id="menu" class="block clearfix bold caps">
 					<a href="/" itemprop="url" title="Prizes, Sponsors, Rules" class="current">home</a>
-					<a href="be-our-website-example.html" title="Help us find a website to optimize">your website for the contest ?</a>
+					<a href="news.html" title="Contest news">news</a>
 					<a href="rules.html" title="Contest rules">rules</a>
-					<a href="register.html" class="deactivate" title="Soon!">register</a>
-					<a href="leaderboard.html" class="deactivate" title="Soon!">leaderboard</a>
+					<a href="register.html" title="Register for the contest">register</a>
+					<a href="leaderboard.html" class="hide deactivate" title="Soon!">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
 					<a href="about.html" title="Organizers and Sponsors">about</a>
 				</nav>
@@ -73,7 +74,7 @@
 						<li><a href="#win">How to win ?</a></li>
 						<li><a href="#gifts">What to win</a></li>
 						<li class="hide"><a href="#rules">Rules</a></li>
-<!--						<li><a href="#partners">Sponsors</a></li>-->
+						<!--						<li><a href="#partners">Sponsors</a></li>-->
 						<li><a href="#judges">Judges</a></li>
 						<li><a href="#people">People</a></li>
 					</ul>
@@ -95,13 +96,13 @@
 						</div>
 						<div class="floatLeft w25pc">
 							<p class="bgGreen">4. Try to <strong>perform</strong> in one or all of the 3 categories</p>
-						</div>						
+						</div>
 					</div>
 
 					<ol>
 						<li>Best YOTTAA score. <strong>Win an IPAD</strong>, courtesy of <a href="http://www.yottaa.com">YOTTAA</a></li>
 						<li>Best <a href="https://developer.mozilla.org/en/DOM/window.onload#Notes" title="Onload event description">onload</a> &
-							<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a> times. 
+							<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a> times.
 							<strong>Win an iPod touch</strong>,
 							courtesy of <a href="http://www.catchpoint.com/" title="Web performance monitoring">Catchpoint Systems</a></li>
 						<li>Smallest number of requests & total size.
@@ -110,19 +111,21 @@
 
 					<p>When participants have similar scores or timings, manual checks will be done. Innovation and progressive rendering level will be taken into account.</p>
 
-					<p>The contest starts the <strong><time datetime="2010-10-25" itemprop="startDate" >25th October</time></strong> and ends the <strong><time datetime="2010-11-30" itemprop="endDate">30th November</time></strong>,
-						<a href="http://twitter.com/webperf_contest" title="Follow us to get latest news">see you soon</a>!</p>
+					<p>The contest started the <strong><time datetime="2010-10-25" itemprop="startDate" >25th October</time></strong> !
+						It will ends the <strong><time datetime="2010-11-30" itemprop="endDate">30th November</time></strong>.</p>
+
+					<p>Get latests new <a href="http://twitter.com/webperf_contest" title="Follow us to get latest news">on twitter</a>.</p>
 				</div>
 				<div itemprop="description">
 					<h1 class="marg0t" id="brief">Brief</h1>
 					<p><a href="http://zeroload.net/blog/">Zeroload</a> is organizing the first web performance contest, with the support of <a href="http://www.yottaa.com">YOTTAA</a> and <a href="http://www.alwaysdata.com/" class="logo">Alwaysdata.</a></p>
 					<p><a href="#people">We</a> are a group of web performance junkies organizing a contest like the <a href="http://js1k.com">js1k</a> competition but this time on the subject of <a href="http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/" title="Web Performance Optimization">WPO</a> (<b>W</b>eb <b>P</b>erformance <b>O</b>ptimization).</p>
 					<p>This is the first time a competition of this kind is organized (well, <a href="http://www.fastwebrace.com/">almost</a>).</p>
-					<p id="when">The contest will start the <time datetime="2010-10-25">25th October</time> and end the <time datetime="2010-11-30">30th November</time>.</p>
+					<p id="when">The contest <strike>will start</strike> started the <time datetime="2010-10-25">25th October</time> and end the <time datetime="2010-11-30">30th November</time>.</p>
 				</div>
 				<div class="hide">
 					<h1 id="howto">How to enter the competition ? (soon)</h1>
-					<p><a href="register.html" class="deactivate">Download the files and register</a>. The Zip contains a complete static webpage (.html) with all the required assets (js, css, backgrounds, ads) for the page to work.</p>
+					<p><a href="register.html">Download the files and register</a>. The Zip contains a complete static webpage (.html) with all the required assets (js, css, backgrounds, ads) for the page to work.</p>
 					<p>Download the files and register. The Zip contains a complete static webpage (.html) with all the required assets (js, css, backgrounds, ads) for the page to work.</p>
 					<p>You will then receive <strong>a temporary FTP account</strong> on a French host (provided by our sponsor, <a href="http://www.alwaysdata.com">Alwaysdata</a>) to put your files.</p>
 					<p>You will also be given a <strong>uniqid</strong> wich will be the directory name where to put your files.</p>
@@ -137,13 +140,13 @@
 					<li>Best onload & start render times</li>
 					<li>Smallest number of requests & total size</li>
 				</ul>
-				
+
 				<p>Measurements tools :</p>
 				<ul>
 					<li>Yottaa</li>
 					<li>WPT paris location, DSL (1.5Mb/s, 50ms <abbr title="Round Trip Time">RTT</abbr>)</li>
 				</ul>
-				
+
 				<p>All the participant's files will be hosted on the same location (alwaysdata servers).</p>
 				<p>You will be able to test your changes in the exact same conditions as us with, the FTP + HTTP account which will be given to you.</p>
 
@@ -160,15 +163,15 @@
 					<li>Fame!</li>
 					<li>Performance skills</li>
 					<li>Self accomplishement</li>
-<!--					<li>Want to <a href="mailto:info@webperf-contest.com">give something else</a> ?
+					<!--					<li>Want to <a href="mailto:info@webperf-contest.com">give something else</a> ?
 						A book, ticket for a conference, license for your software/solution ? Be our sponsor!</li>-->
 				</ul>
 
-<!--				<h1 id="partners">Sponsors</h1>
+				<!--				<h1 id="partners">Sponsors</h1>
 				<p><a href="http://www.yottaa.com" title="Web performance analytics">YOTTAA</a> is our <strong>main sponsor</strong>. YOTTAA is providing us web performance measurements for the participants entries. Also YOTTAA is giving an IPAD to the participant that will have the best YOTTAA score.</p>
 				<p>Alwaysdata has been kind enough to host the files for each participant.</p>-->
 
-<!--				<p>Do you want to help us and gain some buzz on your products or your event ? <a href="mailto:info@webperf-contest.com">Contact us</a> ! We welcome a licence of your product, a ticket to your event or some goodie at your name as additionnal prizes.</p>-->
+				<!--				<p>Do you want to help us and gain some buzz on your products or your event ? <a href="mailto:info@webperf-contest.com">Contact us</a> ! We welcome a licence of your product, a ticket to your event or some goodie at your name as additionnal prizes.</p>-->
 
 				<h1 id="judges">Judges</h1>
 				<ul>
@@ -181,8 +184,9 @@
 				<h1 id="people">People involved in this project</h1>
 				<ul>
 					<li><a href="http://twitter.com/edasfr">Éric Daspet</a></li>
+					<li><a href="http://twitter.com/mitternacht">Anne-Sophie Fradier</a></li>
 					<li><a href="http://braincracking.org/a-propos/">Jean-Pierre Vincent</a></li>
-					<li><a href="http://twitter.com/zeroload">Vincent Voyer</a></li>
+					<li><a href="http://twitter.com/zeroload">Vincent Voyer</a> (contest creator)</li>
 				</ul>
 
 			</div>

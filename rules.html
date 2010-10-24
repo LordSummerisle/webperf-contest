@@ -7,13 +7,13 @@
 
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
 		<!-- yui resets/styles must be on top, then ours -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v3">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v3">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v4">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v4">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-12667483-3']);
-			_gaq.push(['_trackPageview']);
+			_gaq.push(['_trackPageview']);_gaq.push(['_setDomainName', 'webperf-contest.com']);
 			(function() {
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -35,13 +35,14 @@
 				<div class="floatRight sponsors">
 					<div class="floatLeft marg1emr">
 						<strong>Gold sponsors</strong>
-						<a href="http://zeroload.net/blog/" alt="Contest owner" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
-						<a href="http://www.yottaa.com" alt="Main sponsor" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
 						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 					</div>
 					<div class="floatLeft">
 						<span>Silver sponsor</span>
-						<a href="http://www.catchpoint.com/" alt="Silver sponsor" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
 					</div>
 				</div>
 
@@ -52,10 +53,10 @@
 
 				<nav id="menu" class="block clearfix bold caps">
 					<a href="/" title="Prizes, Sponsors, Rules">home</a>
-					<a href="be-our-website-example.html" title="Help us find a website to optimize">your website for the contest ?</a>
+					<a href="news.html" title="Contest news">news</a>
 					<a href="rules.html" class="current" title="Contest rules">rules</a>
-					<a href="register.html" class="deactivate" title="Soon!">register</a>
-					<a href="leaderboard.html" class="deactivate" title="Soon!">leaderboard</a>
+					<a href="register.html" title="Register for the contest">register</a>
+					<a href="leaderboard.html" class="hide deactivate" title="Soon!">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
 					<a href="about.html" title="Organizers and Sponsors">about</a>
 				</nav>
@@ -63,7 +64,63 @@
 
 			<div id="text-container">
 
-				<h1>Rules</h1>
+				<h1>Webperf contest rules</h1>
+
+				<h2>Goal</h2>
+
+				<p>Optimize a real world web page et try to perform in the three categories :</p>
+
+				<ul>
+					<li>Best YOTTAA score computed from <a href="http://www.yottaa.com">http://www.yottaa.com</a></li>
+					<li>Best <a href="https://developer.mozilla.org/en/DOM/window.onload#Notes" title="Onload event description">onload</a> &
+							<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a> times
+							computed from <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
+					<li>Smallest number of requests & total size computed from <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
+				</ul>
+
+				<p>All measurements on <a href="http://www.webpagetest.org">http://www.webpagetest.org</a> will have theses settings : Paris, IE7, DSL.</p>
+
+				<p>Your optimized version of the webpage package have to be sent on our server.</p>
+
+				<h2>Webpage used for the contest</h2>
+
+				<p>One of the french biggest ecommerce websites : <a href="http://www.fnac.com">http://www.fnac.com</a> was kind enough to lend us one of their webpage.</p>
+
+				<p>The original webpage url is : <a href="http://www.fnac.com/enfants.asp">http://www.fnac.com/enfants.asp</a>.</p>
+
+				<p>On the <a href="register.html">register page</a> you'll find the packaged version of this webpage. This package is the webpage you'll have to optimize and send
+					back to us</p>
+
+				<h2>Features to keep</h2>
+
+				<p>There's a certain number of features to keep from the original webpage, i.e. you can't break features for performance optimizations :</p>
+				<ul>
+					<li>Search and autocomplete</li>
+					<li>Smooth toggle when clicking on the arrow next to "mon panier" label</li>
+					<li>Central slider with automatic and manual switch</li>
+					<li>Top menu and hovering submenus</li>
+					<li>Ajax calls for "x produits trouvés"</li>
+					<li>Tracking system must be the same (s_code)</li>
+					<li>Any other features you would notice</li>
+				</ul>
+
+				<h2>Sending your optimizations</h2>
+
+				<p>After your registration is ok, you'll receive your ftp credentials within 24 hours</p>
+
+				<p>Each participant will have access to his FTP directory on 4 different domains :</p>
+				<ul>
+					<li>entries.webperf-contest.com</li>
+					<li>s1.webperf-contest.com</li>
+					<li>s2.webperf-contest.com</li>
+					<li>s3.webperf-contest.com</li>
+				</ul>
+
+				<p>This will allow you to use domain sharding for example.</p>
+
+				<p>All measurements will be done on your "index.html" file on the entries.webperf-contest.com domain. That means you can't change the name of the index file.</p>
+
+				<h2>Cheating</h2>
 
 				<ul>
 					<li>No cheating ! Displaying a big JPG for the complete website is cheating (even if you strip exif data, yes!)</li>
@@ -71,7 +128,6 @@
 					<li>User experience should not be degraded (but you are welcome to improve it), which is to say, for example:
 						<ul>
 							<li>Once page is loaded, all original features must still work</li>
-							<li>Ads, widgets or trackers must still be visible and usable</li>
 							<li>Accessibility must be preserved (also you can improve it)</li>
 							<li>SEO must be preserved (also you can improve it)</li>
 						</ul>
@@ -80,28 +136,28 @@
 					<li>Use htaccess file to tweak your directory configuration if it does not fit your needs</li>
 					<li>CSS1-2-3, canvas, svg, JavaScript (inline, external, minified, ...), dataURIS, MHTML, defer, async, *insert crazy technique* <strong>ALLOWED</strong></li>
 				</ul>
-				
-				<p>The main rule is : <strong>Do it as it was your own website</strong>, your customers & your design. Do not ruin  everything for performance.</p>				
 
-				<p>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements, provided you respect the "user experience" rule.</p> 
+				<p>The main rule is : <strong>Do it as it was your own website</strong>, your customers & your design. Do not ruin  everything for performance.</p>
+
+				<p>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements, provided you respect the "user experience" rule.</p>
 				<p>If a typical product owner would refuse your change, you may be outside the rules. <a href="http://twitter.com/webperf_contest">Ask</a> if you're really unsure, we'll also contact you if there's a problem.</p>
-				<p>The judges <strong>will have the final word</strong> on what they think is acceptable or not, espcially when two participants have very similar timings and scores.</p>
+				<p>The judges <strong>will have the final word</strong> on what they think is acceptable or not, especially when two participants have very similar timings and scores.</p>
 
-</div></div>
-<script type="text/javascript">
-	var $soon = document && document.getElementsByClassName('deactivate');
-	if ($soon) {
-		for(var i = 0, limit = $soon.length; i < limit; i+=1) {
-			if($soon[i].tagName === 'A') {
-				$soon[i].href = '/soon.html';
-				$soon[i].onclick = function() {
-					return false;
+			</div></div>
+		<script type="text/javascript">
+			var $soon = document && document.getElementsByClassName('deactivate');
+			if ($soon) {
+				for(var i = 0, limit = $soon.length; i < limit; i+=1) {
+					if($soon[i].tagName === 'A') {
+						$soon[i].href = '/soon.html';
+						$soon[i].onclick = function() {
+							return false;
+						}
+					} else {
+
+					}
 				}
-			} else {
-
 			}
-		}
-	}
-</script>
+		</script>
 	</body>
 </html>

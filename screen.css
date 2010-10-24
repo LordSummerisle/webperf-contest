@@ -52,11 +52,6 @@ body {
 	float:left;
 }
 
-#menu .current {
-	background:#fff;
-	color:#000
-}
-
 #menu a+a {
 	border-left:1px solid #000;
 }
@@ -69,6 +64,16 @@ body {
 #menu a:hover {
 	color:#fff;
 	background:#1693A5;
+}
+
+#menu .current {
+	/* !important is for the href="register.html" selector, see below "*/
+	background:#fff !important;
+	color:#000 !important;
+}
+
+#menu a[href="register.html"], #menu a[href="register-fr.html"] {
+	color:yellow;
 }
 
 #content-container {
