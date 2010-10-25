@@ -152,7 +152,7 @@ Hello $name,
 
 	You'll receive your FTP credentials within 24 hours.
 
-	You can download the webpage package and start optimizing it : http://cdn.webperf-contest.com/webpage.zip
+	You can download the webpage package and start optimizing it : /webpage.zip
 
 	You'll find a copy of the rules in the file named RULES-EN.html.
 
@@ -180,7 +180,7 @@ Bonjour $name,
 
 	Vous recevrez vos logins FTP d'ici à 24 heures.
 
-	Vous pouvez d'ores et déjà commencer à optimiser la page web du concours en téléchargeant le package ici : http://cdn.webperf-contest.com/webpage.zip
+	Vous pouvez d'ores et déjà commencer à optimiser la page web du concours en téléchargeant le package ici : /webpage.zip
 
 	Vous trouverez une copie des règles dans le fichier RULES-FR.html.
 
