@@ -7,8 +7,8 @@
 
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
 		<!-- yui resets/styles must be on top, then ours -->
-		<link rel="stylesheet" type="text/css" href="/library.css?v4">
-		<link rel="stylesheet" type="text/css" href="/screen.css?v4">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v4">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v4">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -30,19 +30,19 @@
 			<header class="block" id="header">
 				<div class="floatRight marg1eml">
 					Language
-					<br/><a lang="fr" title="Passer en langue française" href="rules-fr.html"><img src="/fr.png" alt="Français" /></a>
+					<br/><a lang="fr" title="Passer en langue française" href="rules-fr.html"><img src="http://cdn.webperf-contest.com/fr.png" alt="Français" /></a>
 				</div>
 				<div class="floatRight sponsors">
 					<div class="floatLeft marg1emr">
 						<strong>Gold sponsors</strong>
-						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="/logos/zeroload.png" alt="Zeroload" /></a>
-						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="/logos/yottaa.png" alt="with Yottaa" /></a>
-						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 					</div>
 					<div class="floatLeft">
 						<span>Silver sponsor</span>
-						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
-						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="/logos/clever-age.png" alt="Clever Age" /></a>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
 					</div>
 				</div>
 
@@ -78,7 +78,7 @@
 					<li>Smallest number of requests & total size computed from <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
 				</ul>
 
-				<p>All measurements on <a href="http://www.webpagetest.org">http://www.webpagetest.org</a> will have theses settings : Paris, IE7, DSL.</p>
+				<p>All measurements on <a href="http://www.webpagetest.org">http://www.webpagetest.org</a> will have these settings : Paris, IE7, DSL.</p>
 
 				<p>Your optimized version of the webpage package have to be sent on our server.</p>
 
@@ -128,19 +128,21 @@
 					<li>User experience should not be degraded (but you are welcome to improve it), which is to say, for example:
 						<ul>
 							<li>Once page is loaded, all original features must still work</li>
-							<li>Accessibility must be preserved (also you can improve it)</li>
-							<li>SEO must be preserved (also you can improve it)</li>
+							<li>Accessibility must be preserved (although you can improve it)</li>
+							<li>SEO must be preserved (although you can improve it)</li>
 						</ul>
 					</li>
 					<li>Use our servers, you can't host files on other domains than *.webperf-contest.com</li>
 					<li>Use htaccess file to tweak your directory configuration if it does not fit your needs</li>
 					<li>CSS1-2-3, canvas, svg, JavaScript (inline, external, minified, ...), dataURIS, MHTML, defer, async, *insert crazy technique* <strong>ALLOWED</strong></li>
+					<li>We'll be using IE7 for WPT but that do not means you can't use new techniques</li>
+					<li>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements, provided you respect the "user experience" rule</li>
 				</ul>
 
-				<p>The main rule is : <strong>Do it as it was your own website</strong>, your customers & your design. Do not ruin  everything for performance.</p>
+				<p>The main rule is : <strong>Do it as it was your <u>own website</u></strong>, your customers & your design. Do not ruin  everything for performance.</p>
 
-				<p>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements, provided you respect the "user experience" rule.</p>
 				<p>If a typical product owner would refuse your change, you may be outside the rules. <a href="http://twitter.com/webperf_contest">Ask</a> if you're really unsure, we'll also contact you if there's a problem.</p>
+
 				<p>The judges <strong>will have the final word</strong> on what they think is acceptable or not, especially when two participants have very similar timings and scores.</p>
 
 			</div></div>

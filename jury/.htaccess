@@ -1,0 +1,9 @@
+ExpiresActive On
+
+# do not cache html in admin you fool !
+ExpiresByType text/html "now"
+
+AuthUserFile /home/sites/webperf-contest/jury/.is-this-safe-to-have-htpasswd-here
+AuthName "How dare you?"
+AuthType Basic
+require valid-user

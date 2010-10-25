@@ -89,7 +89,7 @@ $insert = "insert into participant values (DEFAULT, ";
 //utiliser gmdate() pour l'enregistrement de la date d'inscription
 
 foreach($clean_fields as $value) {
-	$insert .= "'".mysql_real_escape_string($value)."',";
+	$insert .= "'".mysql_real_escape_string(stripslashes($value))."',";
 }
 
 
@@ -123,11 +123,8 @@ $email = $clean_fields['email'];
 
 // envoi du mail d'inscription
 // pour tests :
-//$mail = Mail::factory("smtp", array ('host' => 'smtp.free.fr')
-$mail = Mail::factory("sendmail"
-     /*'auth' => true,
-     'username' => $username,
-     'password' => $password)*/);
+//$mail = Mail::factory("smtp", array ('host' => 'smtp.free.fr'));
+$mail = Mail::factory("sendmail");
 $headers['eng'] = array(
 	"From"=>"Webperf contest <support@webperf-contest.com>",
 	"To"=> $email,
@@ -192,7 +189,7 @@ Bonjour $name,
 
 	Merci et bonne chance !
 
-	http://webperf-contest.com
+	http://webperf-contest.com/index-fr.html
 	http://twitter.com/webperf_contest
 EOT;
 

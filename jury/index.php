@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Webperf contest - Soon</title>
+		<title>Webperf contest - Admin dashboard</title>
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
@@ -28,11 +28,19 @@
 		<div id="content-container">
 
 			<header class="block" id="header">
-				<span class="floatRight">Sponsors</span>
-
-				<a href="http://zeroload.net/blog/" class="floatRight clearRight logo" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
-				<a href="http://www.yottaa.com" class="floatRight clearRight logo" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
-				<a href="http://www.alwaysdata.com/" class="floatRight clearRight logo" title="Hébergement mutualisé et dédié haute qualité"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+				<div class="floatRight sponsors">
+					<div class="floatLeft marg1emr">
+						<strong>Gold sponsors</strong>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+					</div>
+					<div class="floatLeft">
+						<span>Silver sponsor</span>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
+					</div>
+				</div>
 
 				<h1 class="caps center classicTextShadow">
 					Webperf <span class="white">Contest</span> 2010
@@ -40,17 +48,24 @@
 				<h2 class="center">Optimize a website's homepage and win some prizes</h2>
 
 				<nav id="menu" class="block clearfix bold caps">
-					<a href="/">home</a>
-					<a href="be-our-website-example.html">your website for the contest ?</a>
-					<a href="register.html" title="Register for the contest">register</a>
-					<a href="leaderboard.html" class="hide deactivate" title="Soon!">leaderboard</a>
-					<a href="http://twitter.com/webperf_contest">twitter</a>
-					<a href="mailto:info@webperf-contest.com" title="info@webperf-contest.com">contact</a>
+					<a href="/" title="Prizes, Sponsors, Rules">home</a>
+					<a href="/news.html" title="Contest news">news</a>
+					<a href="/rules.html" title="Contest rules">rules</a>
+					<a href="/register.html" title="Register for the contest">register</a>
+					<a href="/leaderboard.html" class="hide deactivate" title="Soon!">leaderboard</a>
+					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
+					<a href="/about.html" title="Organizers and Sponsors">about</a>
+					<a href="./" class="current" title="admin">admin</a>
 				</nav>
 			</header>
 
 			<div id="text-container">
-				<h1>The contest has not started yet, come back later</h1>
+
+				<h1>Admin</h1>
+
+				<?php include 'dashboard.php'; ?>
+
+				
 			</div>
 		</div>
 		<script type="text/javascript">
