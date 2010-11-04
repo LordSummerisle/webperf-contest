@@ -1,23 +1,14 @@
 Ce repo représente le site web qui tourne sur http://webperf-contest.com
 
 Si vous créez de nouveaux fichiers ou bien si vous souhaitez réaliser une tâche, merci de l'indiquer quelque part afin qu'on ne fasse pas deux fois la même chose !
-En attendant que j'organise mieux le travail ou que vous vous proposiez pour réaliser une des tâches.
+
 
 TODO:
 
 - Dashboard d'administration
--- dashboard d'administration des inscriptions avec toutes les informations + "logins envoyés, oui/non"
---- si non = il faut créer le dossier à la main sur le FTP et créer l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
--- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
---- on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
+-- possibilité d'envoyer les logins à 1 personne (renvoyer les logins)
 
 Tâches vincent voyer: (si vous souhaitez les faire alors venir me demander par messagerie ou autre)
-- ajouter un crédit à Anne Sophie pour la traduction
-- Procédure d'inscription
--- envoit d'un mail récapitulatif au participant, avec son uniqid et la mention "vous recevrez vos identifiants bientôt"
--- modifier la BDD pour avoir des champs indiquants "logins ftp envoyés, oui/non"
--- +1 champs "responsable", on désigne qui est le responsable pour l'inscription et la création des comptes FTP (comme ça pas de doublon d'envoi ..)
--- création de la BDD sur le serveur zeroload
 
 - dashboard (leaderboard) public/admin
 -- lancer automatiquement des tests WPT toutes les 2heures et enregistrer les résultats dans des fichiers JSON (deux séparés, l'un avec toutes les données = admin, l'autre avec l'essentiel : nom, (twitter) + temps de la page + nb req etc)
@@ -29,6 +20,16 @@ s'inspirer de http://code.webpagetest.org/svn/compete/upload.php pour lancer les
 
 
 DONE:
+-- dashboard d'administration des inscriptions avec toutes les informations + "logins envoyés, oui/non"
+--- si non = il faut créer le dossier à la main sur le FTP et créer l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
+-- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
+--- on gagnera énormément de temps et c'est pas franchement long à faire tout ça, une grosse requête sql, un tableau, des liens, une page php en +
+- Procédure d'inscription
+-- envoit d'un mail récapitulatif au participant, avec son uniqid et la mention "vous recevrez vos identifiants bientôt"
+-- modifier la BDD pour avoir des champs indiquants "logins ftp envoyés, oui/non"
+-- +1 champs "responsable", on désigne qui est le responsable pour l'inscription et la création des comptes FTP (comme ça pas de doublon d'envoi ..)
+-- création de la BDD sur le serveur zeroload
+- ajouter un crédit à Anne Sophie pour la traduction
 - configurer le serveur alwaysdata
 -- lier s1.webperf-contest.com au rep X (rep participants)
 -- lier s2.webperf-contest.com au rep X (rep participants)
@@ -61,3 +62,4 @@ préciser les modifications qu'ils ont faites (voir gist sur le formulaire)
 - indiquer les cadeaux de stoyan
 - rajouter le nouveau sponsor
 -- faire une partie sponsor gold et silver
+En attendant que j'organise mieux le travail ou que vous vous proposiez pour réaliser une des tâches.

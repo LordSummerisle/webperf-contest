@@ -52,7 +52,7 @@
 					<a href="/news.html" title="Contest news">news</a>
 					<a href="/rules.html" title="Contest rules">rules</a>
 					<a href="/register.html" title="Register for the contest">register</a>
-					<a href="/leaderboard.html" class="hide deactivate" title="Soon!">leaderboard</a>
+					<a href="/leaderboard.html" class="hide deactivate" title="Who's leading the contest?">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
 					<a href="/about.html" title="Organizers and Sponsors">about</a>
 					<a href="./" class="current" title="admin">admin</a>

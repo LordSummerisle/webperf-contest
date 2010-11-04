@@ -3,14 +3,6 @@ html {
 	overflow-y:scroll;
 }
 
-html, body {
-	/*	backgroundd:#121669;*/
-}
-
-body {
-
-}
-
 #header {
 	padding:.5% 1% 0 0;
 	-moz-border-radius:0 0 5px 0;
@@ -24,10 +16,6 @@ body {
 #header h1 {
 	margin:.75% 0 0;
 	font-size:350%;
-}
-
-.sponsors div+div {
-/*	margin-left:1%;*/
 }
 
 .sponsors a {
@@ -101,10 +89,6 @@ body {
 	color:#871235;
 }
 
-p {
-	/*	text-align:justify;*/
-}
-
 ul li {
 	list-style:disc outside url("list-arrow.png");
 }
@@ -125,24 +109,6 @@ a:focus {
 a:active {
 
 }
-
-/* fonts */
-/*.sansRounded {
-	font-family: 'FrankfurterComMedium', Arial;
-
-}*/
-
-/**
-* Bad sizes when uppercase all in Windows : 17, 16, 14
-*/
-/*@font-face {
-	font-family: "FrankfurterComMedium";
-	src: url("webfonts/frankfurtercom-medium-webfont.eot");
-	src: local("®®"), url("webfonts/frankfurtercom-medium-webfont.woff") format("woff"), url("webfonts/frankfurtercom-medium-webfont.ttf") format("truetype"), url("webfonts/frankfurtercom-medium-webfont.svg#webfontt1bQxopQ") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-}*/
 
 /**
 Register
@@ -268,3 +234,50 @@ Register
 	min-height:3em;
 }
 
+/* Leaderboard */
+.tablesorter {
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+	border-collapse:separate;
+	border-spacing:1px;
+}
+.tablesorter thead th {
+	background-color: #e6EEEE;
+	padding: 4px;
+	border:1px solid #fff;
+}
+.tablesorter .header {
+	background-image: url(leaderboard/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+.tablesorter td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+.tablesorter tr:nth-child(odd) td {
+	background-color:#F0F0F6;
+}
+
+.tablesorter .headerSortUp {
+	background-image: url(leaderboard/asc.gif);
+}
+
+.tablesorter .headerSortDown {
+	background-image: url(leaderboard/desc.gif);
+}
+
+.tablesorter .headerSortDown, .tablesorter .headerSortUp {
+	background-color: #8dbdd8;
+}
+
+.tablesorter td {
+	border:0;
+}
