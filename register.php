@@ -94,7 +94,7 @@ foreach($clean_fields as $value) {
 
 
 // admin, date, login envoyés
-$insert .= "DEFAULT, '".gmdate("Y-m-d H:i:s")."', DEFAULT, DEFAULT";
+$insert .= "DEFAULT, '".gmdate("Y-m-d H:i:s")."', DEFAULT, DEFAULT,";
 
 // on sauvegarde l'uniqid pour envoit du mail
 $uniqid = uniqid();
@@ -104,7 +104,7 @@ $insert .= "'".$uniqid."');";
 // insertion
 $query = mysql_query($insert);
 
-//var_dump(mysql_error());
+var_dump(mysql_error());
 
 if(!$query) {
 	die('Error, it seems this email address has already been registered, if you think this is an error please write a message from this particular address to support@webperf-contest.com');
