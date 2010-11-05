@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Concours Webperf - FAQ</title>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
+		<!-- yui resets/styles must be on top, then ours -->
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v6">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v6">
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-12667483-3']);
+			_gaq.push(['_trackPageview']);_gaq.push(['_setDomainName', 'webperf-contest.com']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="top" class="font11">
+		<div id="content-container">
+
+			<header class="block" id="header">
+				<div class="floatRight marg1eml">
+					Langue
+					<br/><a lang="en" title="Switch to english language" href="faq.html"><img src="http://cdn.webperf-contest.com/us.png" alt="English" /></a>
+				</div>
+				<div class="floatRight sponsors">
+					<div class="floatLeft marg1emr">
+						<strong>Gold sponsors</strong>
+						<a href="http://zeroload.net/blog/" alt="Organisateur" title="Consultant en performance Web"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" alt="Sponsor principal" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="avec Yottaa" /></a>
+						<a href="http://www.alwaysdata.com/" title="Hébergement mutualisé et dédié haute qualité"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="et AlwaysData" /></a>
+					</div>
+					<div class="floatLeft">
+						<span>Silver sponsor</span>
+						<a href="http://www.catchpoint.com/" title="Suivi de performance web"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
+					</div>
+				</div>
+
+				<h1 class="caps center classicTextShadow">
+					Concours <span class="white">Webperf</span> 2010
+				</h1>
+				<h2 class="center">Optimisez une page web et gagnez des lots</h2>
+
+				<nav id="menu" class="block clearfix bold caps">
+					<a href="index-fr.html" title="Prizes, Sponsors, Rules">Accueil</a>
+					<a href="news-fr.html" title="Acualités du concours">Actualités</a>
+					<a href="rules-fr.html" title="Règles du concours">Règlement</a>
+					<a href="faq-fr.html" class="current" title="FAQ">FAQ</a>
+					<a href="register-fr.html" title="Formulaire d'inscription">Inscription</a>
+					<a href="leaderboard-fr.html" title="Retrouvez le classement en direct">Classement</a>
+					<a href="http://twitter.com/webperf_contest" title="Suivez l'actualité du concours sur Twitter">Twitter</a>
+					<a href="about-fr.html" title="Qui organise, qui sponsorise ?">À propos</a>
+				</nav>
+			</header>
+
+			<div id="text-container">
+				<h1>Faq</h1>
+
+				<h2>J'ai le meilleur temps onload, startrender, nombre de requêtes, je vais gagner ?</h2>
+				<p>Les juges étudieront les modifications et déciderons si vous gagnez. Les mesures sont utiles pour se faire une première idée du travail accompli.<br/>
+				Nous ne pouvons faire un classement seulement sur les chiffres car certaines optimisations sont trop complexes pour êtres intégrées et nous
+				souhaitons donc aussi classer votre travail.</p>
+
+				<h2>Pourquoi indiquer "utilisez les CSS3" alors qu'une partie des tests seront réalisés sur IE7 ?</h2>
+				<p>Vous pouvez utiliser les CSS3 pour les navigateurs qui les supportent et avoir une version dégradée sous IE7. Par exemple pour
+				des bords arrondis légers ou des ombres. Cela ne signifie pas que vous pouvez utiliser des CSS3 partout.</p>
+
+				<h2>Pourquoi être si vague dans les règles et la faq ?</h2>
+				<p>Ce concours comporte des judges, qui devront donc juger de votre travail. Si nous détaillons toutes les règles qui s'appliquent, cela crééera un cadre de travail trop restreint
+					et de compétition il n y aura plus... Nous laissons donc libre les participants sur un ensemble de points, avec un but précis : optimiser une page web comme si
+				vous étiez chez votre client et que vous lui proposiez des modifications. Elles ne doivent pas êtres trop compliquées à mettre en place et ne doive pas nuire à la qualité du site.</p>
+
+				<h2>Est-ce que le mode repeat view de WPT sera utilisé ?</h2>
+				<p>Oui.<p>
+
+				<h2>Est-il possible de mettre tous les styles directement dans le index.html ?</h2>
+				<p>Non. Sauf si vous me prouvez que c'est envisageable d'avoir un site web qui inclut toujours les mêmes styles en inline dans le html ? Posez vous toujours la question suivante :
+					est-ce que je ferai ça pour mon site web ?
+					<br/>Si vous souhaitez vraiment faire ça, vous devriez réfléchir à comment faire pour que la page suivante inclue directement le fichier css externe dans le head ? Indiquez le dans votre
+				gist comment vous voyez les choses et nous aviserons.</p>
+
+				<h2>Je peux tout mettre en sprite ?</h2>
+				<p>Non, vous feriez ça sur votre site e-commerce ? Comment feriez vous alors pour afficher un même produit dans deux contextes différents ? Vous chargeriez tous les sprites possibles ?
+					Généralement pour les sprites on se limitera aux éléments d'interface.
+					<br/>Sauf si vous êtes facebook et que vous êtes capables de savoir quels sont les produits généralement affichés sur la même page. Même dans ce cas, le gain n'est pas significatif.</p>
+
+				<h2>J'ai un problème avec la configuration serveur, quelque chose ne va pas...</h2>
+				<p>La configuration est identique à celle du site de la FNAC, vous devrez probablement écrire des modifications dans le .htaccess.</p>
+
+				<h2>Est-ce que je peux regrouper tous les appels ajax pour les disponibilités de produits ?</h2>
+				<p>C'est une bonne idée et cela devrait être réalisable en production, oui.</p>
+
+				<h2>Je peux utiliser font-face ?</h2>
+				<p>Non. Font-face c'est vraiment génial pour nos portfolios de développeurs web mais en réalité l'utilisation sur un site grand public est vraiment complexe : différences
+					de rendu, incompatibilités, formats, maintenance, hacks. Au fait, j'adore font-face sinon.</p>
+
+				<h2>Est-ce que je peux générer avec javascript les paramètres UIDS, Origin semblables dans les liens ?</h2>
+				<p>Oui, si vous conservez les bonnes valeurs.</p>
+
+				<h2>Je peux supprimer l'IFRAME ?</h2>
+				<p>Non, vous pouvez la charger différemment par contre.</p>
+
+				<h2>Je peux supprimer des images, du code inutilisé ?</h2>
+				<p>Oui si vous êtes certains que ça ne sert à rien.</p>
+
+				<h2>Je dois conserver les champs hidden dans les formulaireS ?</h2>
+				<p>Oui.</p>
+
+				<h2>Je peux utiliser du CSS3 partout ?</h2>
+				<p>Non. L'utilisations des CSS3 est autorisée mais si votre page ressemble à une feuille blanche sous IE7 alors il y a un problème.<br/>
+					Les CSS3 ne doivent être utilisés que pour des bords arrondis et des ombres difficiles à discerner (donc pas le menu du haut).</p>
+
+				<h2>Les participations seront-elles rendues publiques ?</h2>
+				<p>Oui à la fin du concours.</p>
+
+				<h2>Est-il possible de travailler seulement en local et d'envoyer mes modifications à la fin ?</h2>
+				<p>Oui. Aucun problème</p>
+
+				<h2>Est-il vraiment utile de remplir son gist ?</h2>
+				<p>Oui vous devez le faire si vous ne souhaitez pas être désavantagé. En plus on est un peu feigneants alors on cherchera pas longtemps...</p>
+
+				<h2>Est-il nécessaire de fournir les fichiers sources ?</h2>
+				<p>Si vous avez modifié beaucoup de code et que vos fichiers sont minifiés, il nous sera difficile de juger de votre travail (en plus on et feign..). <br/>Alors s'il vous plait,
+				créez un répertoire "source" sur votre FTP et mettez-y vos fichiers. Si vous liez les noms de fichiers dans votre gist alors vous serez notre chouchou.</p>
+
+				<h2>Je peux changer mon uniqid ? (== je l'ai mis sur mon wall facebook)</h2>
+				<p>Oui,  <a href="mailto:support@webperf-contest.com">contactez-nous</a>.</p>
+
+				<h2>Je peux mettre à jour mon url gist ? (== j'ai pas compris à l'inscription)</h2>
+				<p>Oui,  <a href="mailto:support@webperf-contest.com">contactez-nous</a>.</p>
+
+				<h2>Je peux changer le nom du fichier index.html ?</h2>
+				<p>Si vous ne souaitez pas apparaître dans le leaderboard, oui. Dans tous les cas, pour valider votre participation, vous devrez avant le 30 Novembre, avoir un fichier nommé
+				index.html à la racine.</p>
+
+				<h2>Je peux faire des redirections depuis index.html vers index-ie ou index-ff ?</h2>
+				<p>Non. Tous les tests seront réalisés sur index.html et ce fichier doit renvoyer 200 OK. De plus vous ne devriez pas faire de redirection serveur en fonction du user agent.
+				C'est une mauvaise pratique, une URL = un contenu identique pour tous.</p>
+
+				<h2>Je peux faire des trucs cons comme charger une page blanche puis une iframe avec le contenu complet ? Ou bien un truc plus ouf genre charger un JPG avec toute l'interface
+					du site puis repositionner les éléments dessus ?</h2>
+				<p>Même Chuck Norris désaprouve ce genre de pratiques.</p>
+
+				<p>Posez vos questions sur <a href="http://twitter.com/webperf_contest">twitter</a> ou <a href="mailto:info@webperf-contest.com">contactez-nous</a>.</p>
+			</div>
+		</div>
+	</body>
+</html>

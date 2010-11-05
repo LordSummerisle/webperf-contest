@@ -55,6 +55,7 @@
 					<a href="/" title="Prizes, Sponsors, Rules">home</a>
 					<a href="news.html" title="Contest news">news</a>
 					<a href="rules.html" title="Contest rules">rules</a>
+					<a href="faq.html" title="FAQ">FAQ</a>
 					<a href="register.html" title="Register for the contest">register</a>
 					<a href="leaderboard.html" class="current" title="Who's leading the contest?">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
@@ -63,25 +64,31 @@
 			</header>
 
 			<div id="text-container">
-				<h1>Leaderboard</h1>
 
-				<p>To be in the leaderboard your index.html page must responds with a 200 OK.</p>
-				<p>Some participants may have strange measures, we'll take care of this as soon as possible, thank you.</p>
+				<div id="right-margin" class="marg1emt">
+					<p>There's are 150+ participants and <span id="nbRanked" class="bold"></span> <b>ranked</b> participants.</p>
+					<p>If you want to be ranked, your index.html must send a 200 OK. That means if you do not want to be ranked, just rename it.</p>
+					<p>Some participants are hidden because their files are broken / not complete and generate fake measures.
+						If you want to re-appear here,  <a href="mailto:support@webperf-contest.com">contact-us</a>.</p>
+					<p>This leadeboard is provided only for you to show off on twitter, it will not decide who will win!</p>
+					<p>Leaderboard gets updated every 12 hours (more or less).</p>
+				</div>
+
+				<h1>Leaderboard</h1>
 
 				<div id="leaderboard"></div>
 
-				<p>Leaderboard gets updated every 12 hours ("sometimes" more often). It will not decide who will win. This is why there are judges.</p>
-				
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery.tablesorter.min.js"></script>
 				<script type="text/javascript">
 					var leaderboard = function(data) {
 						if (data && data.length > 0) {
 							$(function(){
+								$('#nbRanked').text(data.length);
 								var i = 0, limit = data.length, $table = $('<table class="tablesorter">');
-								$table.append('<thead><tr><th>Participant</th><th>Onload (ms)</th><th>Start Render (ms)</th><th>Requests (x)</th><th>Size (bytes)</th></tr></thead>');
+								$table.append('<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requests (n)</th><th>Size (kB)</th></tr></thead>');
 								for(; i < limit; i+=1) {
-									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td>'+data[i].data.firstView.loadTime+'</td><td>'+data[i].data.firstView.render+'</td><td>'+data[i].data.firstView.requests+'</td><td>'+data[i].data.firstView.bytesIn+'</td></tr>');
+									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td class="right">'+(data[i].data.firstView.loadTime/1000).toFixed(3)+'</td><td class="right">'+(data[i].data.firstView.render/1000).toFixed(3)+'</td><td class="right">'+data[i].data.firstView.requests+'</td><td class="right">'+(data[i].data.firstView.bytesIn/1024).toFixed(2)+'</td></tr>');
 								}
 								$table.appendTo('#leaderboard');
 								$table.tablesorter({sortList: [[1,0]]}); // sort "onload" first

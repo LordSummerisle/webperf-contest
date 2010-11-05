@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Webperf contest - Faq</title>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
+		<!-- yui resets/styles must be on top, then ours -->
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v6">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v6">
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-12667483-3']);
+			_gaq.push(['_trackPageview']);_gaq.push(['_setDomainName', 'webperf-contest.com']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="top" class="font11">
+		<div id="content-container">
+
+			<header class="block" id="header">
+				<div class="floatRight marg1eml">
+					Language
+					<br/><a lang="fr" title="Passer en langue française" href="faq-fr.html"><img src="http://cdn.webperf-contest.com/fr.png" alt="Français" /></a>
+				</div>
+				<div class="floatRight sponsors">
+					<div class="floatLeft marg1emr">
+						<strong>Gold sponsors</strong>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://cdn.webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://cdn.webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://cdn.webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+					</div>
+					<div class="floatLeft">
+						<span>Silver sponsor</span>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://cdn.webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://cdn.webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
+					</div>
+				</div>
+
+				<h1 class="caps center classicTextShadow">
+					Webperf <span class="white">Contest</span> 2010
+				</h1>
+				<h2 class="center">Optimize a website's homepage and win some prizes</h2>
+
+				<nav id="menu" class="block clearfix bold caps">
+					<a href="/" title="Prizes, Sponsors, Rules">home</a>
+					<a href="news.html" title="Contest news">news</a>
+					<a href="rules.html" title="Contest rules">rules</a>
+					<a href="faq.html" class="current" title="FAQ">FAQ</a>
+					<a href="register.html" title="Register for the contest">register</a>
+					<a href="leaderboard.html" title="Who's leading the contest?">leaderboard</a>
+					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
+					<a href="about.html" title="Organizers and Sponsors">about</a>
+				</nav>
+			</header>
+
+			<div id="text-container">
+				<h1>Faq</h1>
+				<p>As a lot of participants have questions, I had to write this FAQ</p>
+
+				<h2>I have the best onload, startrender, number of requests of all time, will I win?</h2>
+				<p>The judges will study your modifications and tell if you are the winner or not. The measures are here help and give us a good starting point.<br/>
+				We can't rank people only on the measures because some optimizations are too hardcore to really be possible in the real world.</p>
+
+				<h2>Why do you say "use CSS3, canvas.." while the tests for 2nd and 3rd categories will be done using IE7?</h2>
+				<p>You can use CSS3 for newer browsers and get rid of some light border radiuses, or light shadows done with images on IE7. That doesnt means you can use CSS3 everywhere.</p>
+
+				<h2>Why being so vague on the rules?</h2>
+				<p>As there are judges, we can't be 100% precise on the contest rules. Our work is also to decide who will win. If we get too much into details there will be no competition.<br/>
+				Do as you would do if it was your work and we'll decide if it's good enough...</p>
+
+				<h2>Can I inline all stylesheet information?</h2>
+				<p>Well... No! Would you do that for your website and loss every stylesheet cache ability?.
+					<br/>If you really want do that, you'll have to load the stylesheet when your page has loaded and cache it. That way if the user load another webpage you can call the external stylesheet
+				in the &lt;head&gt; tag.</p>
+
+				<h2>Can I sprite EVERYTHING?</h2>
+				<p>No! Again, would you do that on your e-commerce website. A common rule when optimizing webpages is : don't sprite partner images, don't sprite product images, sprite only interface images</p>
+
+				<h2>I have a problem with the server configuration, something is wrong...</h2>
+				<p>You'll have to override some params using your htaccess. Perhaps...</p>
+
+				<h2>Can I regroup all ajax calls to www4.fnac.com for product avaibility?</h2>
+				<p>Yes you can, do it well, that might be possible in the real world for sure.</p>
+
+				<h2>Can I use font-face?</h2>
+				<p>No. Font-face for geeky websites is very cool. But there's a lot of rendering problems with font-face, along with cache problems and it's difficult to implement in a large website.<br/>
+				Also will your website really benefits from using font-face? You should do a lot of testing because browsers do not behave the same with font-face. (there's a lot of other reasons that I
+				will not discuss here, BTW I love using font-face)</p>
+
+				<h2>Can I generate same href parameters suchs as UID, Origin etc.. with javascript?</h2>
+				<p>I guess yes. It would perhaps be not possible in the real world but I do not see any SEO issues with this.</p>
+
+				<h2>Can I remove the IFRAME?</h2>
+				<p>No. Because there are a number of possibilities to load an IFRAME and because it's more fun with it, you can't remove it.</p>
+
+				<h2>Some images seems to not be used, can I remove them?</h2>
+				<p>Yes.</p>
+
+				<h2>Can I remove dead code?</h2>
+				<p>Yes if you are confident that it's not used.</p>
+
+				<h2>Do I need to keep the hidden inputs in forms?</h2>
+				<p>Yes.</p>
+
+				<h2>Can I use CSS3 everywhere?</h2>
+				<p>No. The use of CSS3 is allowed but if your page looks like unstyled on IE6-7-8 when you use CSS3, there's a problem.<br/>CSS3 should only be used for
+				hard to notice border radiuses and shadows, no more.</p>
+
+				<h2>Will the participant's files be made available when the contest ends?</h2>
+				<p>Yes. All files will be available when the contests ends.</p>
+
+				<h2>Can I work on another box and send all my modifications later?</h2>
+				<p>Yes. No problem</p>
+
+				<h2>Do the gist is really usefull?</h2>
+				<p>Yes, if you didn't provide a valid private gist or if you do not provide information on what you've done, it will be very hard for us to decide weither or not you should win.<br/>
+					And you should know that we're LAZY!</p>
+
+				<h2>Do I need to provide you my plain files?</h2>
+				<p>Yes. If you have made big modifications to the css/js/html files, please provide us non-minified, non-aggregated files. Just create a "source" folder on your FTP.</p>
+
+				<h2>Can I change my uniqid?</h2>
+				<p>Yes,  <a href="mailto:support@webperf-contest.com">contact-us</a>.</p>
+
+				<h2>Can I update my gist url?</h2>
+				<p>Yes,  <a href="mailto:support@webperf-contest.com">contact-us</a>.</p>
+
+				<h2>Can I change the index.html filename?</h2>
+				<p>If you do not want to appear on the leaderboard you can rename this file. But before the end of the contest you'll have to rename it to index.html.</p>
+
+				<h2>Can I redirect index.html to index-ie.html or index-ff.html?</h2>
+				<p>No. All tests will be done on requesting this file. If it's not returning a 200 OK you loose.<br/>Also you shouldn't do that, never. There's always a better solution than
+				server side browser detection.</p>
+
+				<h2>Can I do stupid things like loading a blank webpage and then loading my real webpage in a IFRAME?</h2>
+				<p>Yes of course if you want to loose!</p>
+
+				<h2>Will repeatView be taken into account?</h2>
+				<p>Yes.<p>
+
+				<p>Ask you questions now on <a href="http://twitter.com/webperf_contest">twitter</a> or <a href="mailto:info@webperf-contest.com">contact-us</a>.</p>
+			</div>
+		</div>
+	</body>
+</html>

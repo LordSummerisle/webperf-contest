@@ -55,6 +55,7 @@
 					<a href="index-fr.html" title="Prizes, Sponsors, Rules">Accueil</a>
 					<a href="news-fr.html" title="Acualités du concours">Actualités</a>
 					<a href="rules-fr.html" title="Règles du concours">Règlement</a>
+					<a href="faq-fr.html" title="FAQ">FAQ</a>
 					<a href="register-fr.html" title="Formulaire d'inscription">Inscription</a>
 					<a href="leaderboard-fr.html" class="current" title="Retrouvez le classement en direct">Classement</a>
 					<a href="http://twitter.com/webperf_contest" title="Suivez l'actualité du concours sur Twitter">Twitter</a>
@@ -63,14 +64,19 @@
 			</header>
 
 			<div id="text-container">
+
+				<div id="right-margin" class="marg1emt">
+					<p>Il y a plus de 150 participants et <span id="nbRanked" class="bold"></span> <b>sont classés</b>.</p>
+					<p>Si vous voulez apparaître dans le classement, il faut que votre fichier index.html renvoit une réponse 200 OK.</p>
+					<p>Certains participants ont des mesures fausses (trop faibles), elles sont masquées. Si vous souhaitez ré-apparaître ici,
+						<a href="mailto:support@webperf-contest.com">contactez-nous</a>.</p>
+					<p>Ce classement est seulement mis à disposition pour que vous puissiez frimer sur twitter. Il ne déterminera pas qui va gagner.</p>
+					<p>Le classement est mis-à-jour toutes les 12 heures (a peu près).</p>
+				</div>
+
 				<h1>Classement</h1>
 
-				<p>Pour être dans le classement, vous devez avoir une page index.html qui envoit une réponse 200 OK.</p>
-				<p>Certains participants peuvent avoir de faux chiffres, nous essaierons de les éliminer au fur et à mesure.</p>
-
 				<div id="leaderboard"></div>
-
-				<p>Le classement est mis à jour toutes les 12 heures (ou plus parfois..). Il ne détermine pas qui gagnera le concours (même si c'est déjà un bon indicateur). C'est le travail des juges.</p>
 
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery.tablesorter.min.js"></script>
@@ -78,10 +84,11 @@
 					var leaderboard = function(data) {
 						if (data && data.length > 0) {
 							$(function(){
+								$('#nbRanked').text(data.length);
 								var i = 0, limit = data.length, $table = $('<table class="tablesorter">');
-								$table.append('<thead><tr><th>Participant</th><th>Onload (ms)</th><th>Start Render (ms)</th><th>Requêtes (x)</th><th>Poids (bytes)</th></tr></thead>');
+								$table.append('<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requêtes (n)</th><th>Poids (Ko)</th></tr></thead>');
 								for(; i < limit; i+=1) {
-									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td>'+data[i].data.firstView.loadTime+'</td><td>'+data[i].data.firstView.render+'</td><td>'+data[i].data.firstView.requests+'</td><td>'+data[i].data.firstView.bytesIn+'</td></tr>');
+									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td class="right">'+(data[i].data.firstView.loadTime/1000).toFixed(3)+'</td><td class="right">'+(data[i].data.firstView.render/1000).toFixed(3)+'</td><td class="right">'+data[i].data.firstView.requests+'</td><td class="right">'+(data[i].data.firstView.bytesIn/1024).toFixed(2)+'</td></tr>');
 								}
 								$table.appendTo('#leaderboard');
 								$table.tablesorter({sortList: [[1,0]]}); // sort "onload" first
