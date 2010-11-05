@@ -72,7 +72,15 @@ while ($row = mysql_fetch_assoc($result)) {
 					$res .= '-';
 				}
 			} else {
-				$res .= $val;
+				if ($field == 'show_in_leaderboard') {
+					if ($val == '1') {
+						$res .= '<a href="update-show-hide-leaderboard.php?participant_id='.$row['participant_id'].'&action=hide" class="leaderboardLink">masquer ?</a>';
+					} else {
+						$res .= '<a href="update-show-hide-leaderboard.php?participant_id='.$row['participant_id'].'&action=show" class="leaderboardLink">afficher ?</a>';
+					}
+				} else {
+					$res .= $val;
+				}
 			}
 
 		}
@@ -85,3 +93,23 @@ while ($row = mysql_fetch_assoc($result)) {
 echo $res;
 ?>
 </table>
+
+<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.leaderboardLink').click(function(){
+		var that = this;
+		$.get(this.href, function(data){
+			if(data == 1) {
+				that.href = that.href.replace('action=show', 'action=hide');
+				that.textContent = "masquer ?";
+			} else {
+				that.href = that.href.replace('action=hide', 'action=show');
+				that.textContent = "afficher ?";
+			}
+		});
+		this.blur();
+		return false;
+	});
+});
+</script>
