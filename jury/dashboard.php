@@ -1,8 +1,4 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 date_default_timezone_set('Europe/Paris');
 
@@ -47,6 +43,7 @@ if($_SERVER['PHP_AUTH_USER'] == 'vvo') { ?>
 		<th>admin</th>
 		<th>date (GMT)</th>
 		<th>login sent</th>
+		<th>Show in leaderboard</th>
 		<th>uniqid</th>
 	</tr>
 <?php

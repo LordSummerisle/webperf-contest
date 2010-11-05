@@ -94,7 +94,7 @@ foreach($clean_fields as $value) {
 
 
 // admin, date, login envoyés
-$insert .= "DEFAULT, '".gmdate("Y-m-d H:i:s")."', DEFAULT,";
+$insert .= "DEFAULT, '".gmdate("Y-m-d H:i:s")."', DEFAULT, DEFAULT";
 
 // on sauvegarde l'uniqid pour envoit du mail
 $uniqid = uniqid();
