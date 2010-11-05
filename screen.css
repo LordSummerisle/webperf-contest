@@ -249,7 +249,7 @@ Register
 	border:1px solid #fff;
 }
 .tablesorter .header {
-	background-image: url(leaderboard/bg.gif);
+	background-image: url(leaderboard_imgs/bg.gif);
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
@@ -267,11 +267,11 @@ Register
 }
 
 .tablesorter .headerSortUp {
-	background-image: url(leaderboard/asc.gif);
+	background-image: url(leaderboard_imgs/asc.gif);
 }
 
 .tablesorter .headerSortDown {
-	background-image: url(leaderboard/desc.gif);
+	background-image: url(leaderboard_imgs/desc.gif);
 }
 
 .tablesorter .headerSortDown, .tablesorter .headerSortUp {
