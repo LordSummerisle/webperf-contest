@@ -71,10 +71,12 @@
 					<p>Some participants are hidden because their files are broken / not complete and generate fake measures.
 						If you want to re-appear here,  <a href="mailto:support@webperf-contest.com">contact-us</a>.</p>
 					<p>This leadeboard is provided only for you to show off on twitter, it will not decide who will win!</p>
-					<p>Leaderboard gets updated every 12 hours (more or less).</p>
+					<p>Leaderboard gets updated every 4 hours (more or less).</p>
 				</div>
 
 				<h1>Leaderboard</h1>
+
+				<p>Latest test : <span id="latestDate" class="bold"></span>.</p>
 
 				<div id="leaderboard"></div>
 
@@ -85,10 +87,25 @@
 						if (data && data.length > 0) {
 							$(function(){
 								$('#nbRanked').text(data.length);
-								var i = 0, limit = data.length, $table = $('<table class="tablesorter">');
-								$table.append('<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requests (n)</th><th>Size (kB)</th></tr></thead>');
+								var i = 0, limit = data.length, $table = $('<table class="tablesorter">'), dateTmp = new Date, latestDate = new Date/*, nextUpdate, curTime = new Date, cron = 4*3600*1000*/;
+								/*console.log(data[0].date*1000);
+								console.log(curTime.getTime());
+								nextUpdate = curTime.getTime() - data[0].date*1000;
+								nextUpdate = cron - nextUpdate;
+
+								if (nextUpdate < 0) {
+									nextUpdate = false;
+								}
+
+								console.log(nextUpdate/1000/3600);
+//								$('#nextUpdate').text();*/
+								latestDate.setTime(data[0].date*1000);
+								$('#latestDate').text(latestDate.toString());
+
+								$table.append('<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requests (n)</th><th>Size (kB)</th><th>Date of test</th></tr></thead>');
 								for(; i < limit; i+=1) {
-									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td class="right">'+(data[i].data.firstView.loadTime/1000).toFixed(3)+'</td><td class="right">'+(data[i].data.firstView.render/1000).toFixed(3)+'</td><td class="right">'+data[i].data.firstView.requests+'</td><td class="right">'+(data[i].data.firstView.bytesIn/1024).toFixed(2)+'</td></tr>');
+									dateTmp.setTime(data[i].date*1000);
+									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td class="right">'+(data[i].data.firstView.loadTime/1000).toFixed(3)+'</td><td class="right">'+(data[i].data.firstView.render/1000).toFixed(3)+'</td><td class="right">'+data[i].data.firstView.requests+'</td><td class="right">'+(data[i].data.firstView.bytesIn/1024).toFixed(2)+'</td><td class="center font10">'+dateTmp.toString()+'</td></tr>');
 								}
 								$table.appendTo('#leaderboard');
 								$table.tablesorter({sortList: [[1,0]]}); // sort "onload" first
@@ -96,7 +113,7 @@
 						}
 					}
 				</script>
-				<script type="text/javascript" src="http://cdn.webperf-contest.com/leaderboard/"></script>
+				<script type="text/javascript" src="http://webperf-contest.com/leaderboard/"></script>
 			</div>
 		</div>
 	</body>
