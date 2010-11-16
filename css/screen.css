@@ -1,3 +1,4 @@
+
 /* Styling */
 html {
 	overflow-y:scroll;
@@ -90,7 +91,7 @@ html {
 }
 
 ul li {
-	list-style:disc outside url("list-arrow.png");
+	list-style:disc outside url("../list-arrow.png");
 }
 
 /* Links */
@@ -206,19 +207,19 @@ Register
 }
 
 #splash li:nth-child(1) {
-	background:url('trophies/1.png') no-repeat;
+	background:url('../trophies/1.png') no-repeat;
 	min-height:36px;
 	line-height:36px;
 }
 
 #splash li:nth-child(2) {
-	background:url('trophies/2.png') no-repeat 4px 0;
+	background:url('../trophies/2.png') no-repeat 4px 0;
 	min-height:33px;
 	line-height:33px;
 }
 
 #splash li:nth-child(3) {
-	background:url('trophies/3.png') no-repeat 4px 0;
+	background:url('../trophies/3.png') no-repeat 4px 0;
 	min-height:29px;
 	line-height:29px;
 }
@@ -249,7 +250,7 @@ Register
 	border:1px solid #fff;
 }
 .tablesorter .header {
-	background-image: url(leaderboard_imgs/bg.gif);
+	background-image: url(../leaderboard_imgs/bg.gif);
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
@@ -267,11 +268,11 @@ Register
 }
 
 .tablesorter .headerSortUp {
-	background-image: url(leaderboard_imgs/asc.gif);
+	background-image: url(../leaderboard_imgs/asc.gif);
 }
 
 .tablesorter .headerSortDown {
-	background-image: url(leaderboard_imgs/desc.gif);
+	background-image: url(../leaderboard_imgs/desc.gif);
 }
 
 .tablesorter .headerSortDown, .tablesorter .headerSortUp {

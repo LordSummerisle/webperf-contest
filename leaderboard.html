@@ -5,10 +5,10 @@
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.2.0/build/cssreset/reset-min.css&3.2.0/build/cssbase/base-min.css&3.2.0/build/cssfonts/fonts-min.css&3.2.0/build/cssgrids/grids-min.css">
-		<!-- yui resets/styles must be on top, then ours -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/library.css?v7">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/screen.css?v7">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v7">
+
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v7">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v7">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -66,54 +66,34 @@
 			<div id="text-container">
 
 				<div id="right-margin" class="marg1emt">
-					<p>There's are 150+ participants and <span id="nbRanked" class="bold"></span> <b>ranked</b> participants.</p>
+					<p>There's are 200+ participants and <span id="nbRanked" class="bold"></span> <b>ranked</b> participants.</p>
 					<p>If you want to be ranked, your index.html must send a 200 OK. That means if you do not want to be ranked, just rename it.</p>
 					<p>Some participants are hidden because their files are broken / not complete and generate fake measures.
 						If you want to re-appear here,  <a href="mailto:support@webperf-contest.com">contact-us</a>.</p>
 					<p>This leadeboard is provided only for you to show off on twitter, it will not decide who will win!</p>
-					<p>Leaderboard gets updated every 4 hours (more or less).</p>
+					<p>Leaderboard gets updated every 5 hours (more or less).</p>
+					<p>The JSON is cached for one minute on the CDN, do not refresh every 5 seconds it's useless!</p>
 				</div>
 
 				<h1>Leaderboard</h1>
 
-				<p>Latest test : <span id="latestDate" class="bold"></span>.</p>
+				<p>Latest test done : <span id="lastUpdate" class="bold"></span>  ago</p>
+
+				<p id="nextUpdate">Next leaderboard update starts in <span id="nextUpdateTime" class="bold"></span></p>
+				<p id="updateRunning" class="bold hide">Update running</p>
 
 				<div id="leaderboard"></div>
 
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery.tablesorter.min.js"></script>
+				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/leaderboard.js"></script>
+
 				<script type="text/javascript">
-					var leaderboard = function(data) {
-						if (data && data.length > 0) {
-							$(function(){
-								$('#nbRanked').text(data.length);
-								var i = 0, limit = data.length, $table = $('<table class="tablesorter">'), dateTmp = new Date, latestDate = new Date/*, nextUpdate, curTime = new Date, cron = 4*3600*1000*/;
-								/*console.log(data[0].date*1000);
-								console.log(curTime.getTime());
-								nextUpdate = curTime.getTime() - data[0].date*1000;
-								nextUpdate = cron - nextUpdate;
-
-								if (nextUpdate < 0) {
-									nextUpdate = false;
-								}
-
-								console.log(nextUpdate/1000/3600);
-//								$('#nextUpdate').text();*/
-								latestDate.setTime(data[0].date*1000);
-								$('#latestDate').text(latestDate.toString());
-
-								$table.append('<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requests (n)</th><th>Size (kB)</th><th>Date of test</th></tr></thead>');
-								for(; i < limit; i+=1) {
-									dateTmp.setTime(data[i].date*1000);
-									$table.append('<tr><td>'+(data[i].twitter ? '<a href="http://twitter.com/'+data[i].twitter+'">' : '')+data[i].name+(data[i].twitter ? '</a>' : '')+'</td><td class="right">'+(data[i].data.firstView.loadTime/1000).toFixed(3)+'</td><td class="right">'+(data[i].data.firstView.render/1000).toFixed(3)+'</td><td class="right">'+data[i].data.firstView.requests+'</td><td class="right">'+(data[i].data.firstView.bytesIn/1024).toFixed(2)+'</td><td class="center font10">'+dateTmp.toString()+'</td></tr>');
-								}
-								$table.appendTo('#leaderboard');
-								$table.tablesorter({sortList: [[1,0]]}); // sort "onload" first
-							});
-						}
+					function leaderboard(data) {
+						window.LB.init(data, "eng");
 					}
 				</script>
-				<script type="text/javascript" src="http://cdn.webperf-contest.com/leaderboard/"></script>
+				<script type="text/javascript" src="http://webperf-contest.com/leaderboard2/"></script>
 			</div>
 		</div>
 	</body>
