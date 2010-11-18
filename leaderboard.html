@@ -5,10 +5,10 @@
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v8">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v9">
 
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v8">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v8">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v9">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v9">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -68,11 +68,15 @@
 				<div id="right-margin" class="marg1emt">
 					<p>There's are 200+ participants and <span id="nbRanked" class="bold"></span> <b>ranked</b> participants.</p>
 					<p>If you want to be ranked, your index.html must send a 200 OK. That means if you do not want to be ranked, just rename it.</p>
-					<p>Some participants are hidden because their files are broken / not complete and generate fake measures.
-						If you want to re-appear here,  <a href="mailto:support@webperf-contest.com">contact-us</a>.</p>
 					<p>This leadeboard is provided only for you to show off on twitter, it will not decide who will win!</p>
-					<p>Leaderboard gets updated every 5 hours (more or less).</p>
-					<p>The JSON is cached for one minute on the CDN, do not refresh every 5 seconds it's useless!</p>
+					<p class="bold">Initial values</p>
+					<ul>
+						<li>onload : 11.893 s</li>
+						<li>start render : 2.510 s</li>
+						<li>requests : x 115</li>
+						<li>size : 594.54 kB</li>
+						<li>yottaa : 48</li>
+					</ul>
 				</div>
 
 				<h1>Leaderboard</h1>
@@ -82,18 +86,18 @@
 				<p id="nextUpdate">Next leaderboard update starts in <span id="nextUpdateTime" class="bold"></span></p>
 				<p id="updateRunning" class="bold hide">Update running</p>
 
-				<div id="leaderboard"></div>
+				<div id="leaderboard" class="font12"></div>
 
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery.tablesorter.min.js"></script>
-				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/leaderboard.js"></script>
+				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/leaderboard.js?v9"></script>
 
 				<script type="text/javascript">
 					function leaderboard(data) {
 						window.LB.init(data, "eng");
 					}
 				</script>
-				<script type="text/javascript" src="http://cdn.webperf-contest.com/leaderboard2/"></script>
+				<script type="text/javascript" src="http://cdn.webperf-contest.com/leaderboard3/"></script>
 			</div>
 		</div>
 	</body>

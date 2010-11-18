@@ -1,6 +1,6 @@
 (function(w) {
 
-	var timer1, timer2;
+	var timer1, timer2, formatTimeObj;
 
 	function secondsToTime(secs) {
 		var hours = Math.floor(secs / (60 * 60)),
@@ -66,14 +66,14 @@
 		lang : "eng",
 		templates : {
 			table_header : {
-				fra : "<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requêtes (n)</th><th>Poids (Ko)</th></tr></thead>",
-				eng : "<thead><tr><th>Participant</th><th>Onload (s)</th><th>Start Render (s)</th><th>Requests (n)</th><th>Size (kB)</th></tr></thead>"
+				fra : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requêtes <sup>(n)</sup></th><th>Poids <sup>(Ko)</sup></th><th><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>",
+				eng : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requests <sup>(n)</sup></th><th>Size <sup>(kB)</sup></th><th><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>"
 			},
 			inthefuture : {
 				fra : "Dans le futur",
 				eng : "In the future"
 			},
-			line : "<tr><td>{name}</td><td class=right>{onload}</td><td class=right>{start_render}</td><td class=right>{requests}</td><td class=right>{bytes}</td></tr>"
+			line : "<tr><td>{name}</td><td class=right>{onload}</td><td class=right>{start_render}</td><td class=right>{requests}</td><td class=right>{bytes}</td><td class=\"center bold yottaa_row\">{yottaa}</td></tr>"
 		},
 		containers : {
 			$nbranked : $('#nbRanked'),
@@ -106,25 +106,26 @@
 		init : function(data, lang) {
 			stopAllTimers();
 
-			var entries = data.entries, i = 0, limit = entries.length, dateTmp = new Date, htmlLine;
+			var wpt_data = data.wpt_data, yottaa_data = data.yottaa_data, i = 0, limit = wpt_data.length, dateTmp = new Date, htmlLine;
 
 			this.lang = lang;
 
-			this.containers.$nbranked.text(entries.length);
+			this.containers.$nbranked.text(wpt_data.length);
 
-			this.findLastUpdate(entries[0].date*1000);
+			this.findLastUpdate(wpt_data[0].date*1000);
 
 			this.containers.$table.empty().append(this.templates.table_header[lang]);
 
 			for(; i < limit; i+=1) {
-				if (entries[i].data && entries[i].data.firstView && entries[i].data.firstView.loadTime && parseInt(entries[i].data.firstView.loadTime) > 1) {
-					dateTmp.setTime(entries[i].date*1000);
+				if (wpt_data[i].data && wpt_data[i].data.firstView && wpt_data[i].data.firstView.loadTime && parseInt(wpt_data[i].data.firstView.loadTime) > 1) {
+					dateTmp.setTime(wpt_data[i].date*1000);
 					htmlLine = tmpl({
-						name: (entries[i].twitter ? '<a href="http://twitter.com/'+entries[i].twitter+'">' : '')+entries[i].name+(entries[i].twitter ? '</a>' : ''),
-						onload: (entries[i].data.firstView.loadTime/1000).toFixed(3),
-						start_render: (entries[i].data.firstView.render/1000).toFixed(3),
-						requests: entries[i].data.firstView.requests,
-						bytes: (entries[i].data.firstView.bytesIn/1024).toFixed(2)
+						name: (wpt_data[i].twitter ? '<a href="http://twitter.com/'+wpt_data[i].twitter+'">' : '')+wpt_data[i].name+(wpt_data[i].twitter ? '</a>' : ''),
+						onload: (wpt_data[i].data.firstView.loadTime/1000).toFixed(3),
+						start_render: (wpt_data[i].data.firstView.render/1000).toFixed(3),
+						requests: wpt_data[i].data.firstView.requests,
+						bytes: (wpt_data[i].data.firstView.bytesIn/1024).toFixed(2),
+						yottaa: yottaa_data[wpt_data[i].id] || 0
 					}, this.templates.line);
 					this.containers.$table.append(htmlLine);
 				}
@@ -140,7 +141,6 @@
 					decrementTime(data.nextUpdate, this.containers.$nextUpdateTime, lang, this.switchToRunningUpdate, this);
 				}
 			}
-
 		}
 	};
 

@@ -5,10 +5,10 @@
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v8">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v9">
 		
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v8">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v8">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v9">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v9">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -68,12 +68,16 @@
 				<div id="right-margin" class="marg1emt">
 					<p>Il y a plus de 200 participants et <span id="nbRanked" class="bold"></span> <b>sont classés</b>.</p>
 					<p>Si vous voulez apparaître dans le classement, il faut que votre fichier index.html renvoit une réponse 200 OK.</p>
-					<p>Certains participants ont des mesures fausses (trop faibles), elles sont masquées. Si vous souhaitez ré-apparaître ici,
-						<a href="mailto:support@webperf-contest.com">contactez-nous</a>.</p>
 					<p>Ce classement est seulement mis à disposition pour que vous puissiez frimer sur twitter. Il ne déterminera pas qui va gagner.</p>
-					<p>Le classement est mis-à-jour toutes les 5 heures (a peu près).</p>
 					<p>Vous pouvez parfois ne plus être affiché dans le classement car le test webpagetest n'a pas fonctionné, attendez la prochaine mise à jour</p>
-					<p>Il y a un cache d'une minute sur le CDN pour le classement donc ne rafraichissez pas constamment la page, c'est inutile</p>
+					<p class="bold">Valeurs de base</p>
+					<ul>
+						<li>onload : 11.893 s</li>
+						<li>start render : 2.510 s</li>
+						<li>requêtes : x115</li>
+						<li>poids : 594.54 Ko</li>
+						<li>yottaa : 48</li>
+					</ul>
 				</div>
 
 				<h1>Classement</h1>
@@ -83,7 +87,7 @@
 				<p id="nextUpdate">Prochaine mise à jour du classement dans <span id="nextUpdateTime" class="bold"></span></p>
 				<p id="updateRunning" class="bold hide">Mise à jour en cours</p>
 
-				<div id="leaderboard"></div>
+				<div id="leaderboard" class="font12"></div>
 
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
 				<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery.tablesorter.min.js"></script>
@@ -94,7 +98,7 @@
 						window.LB.init(data, "fra");
 					}
 				</script>
-				<script type="text/javascript" src="http://cdn.webperf-contest.com/leaderboard2/"></script>
+				<script type="text/javascript" src="http://cdn.webperf-contest.com/leaderboard3/"></script>
 			</div>
 		</div>
 	</body>

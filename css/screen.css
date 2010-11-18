@@ -238,15 +238,15 @@ Register
 /* Leaderboard */
 .tablesorter {
 	background-color: #CDCDCD;
-	margin:10px 0pt 15px;
+	margin:0;
 	width: 100%;
 	text-align: left;
 	border-collapse:separate;
 	border-spacing:1px;
 }
-.tablesorter thead th {
+.tablesorter th {
 	background-color: #e6EEEE;
-	padding: 4px;
+	padding: 4px 15px 4px 4px;
 	border:1px solid #fff;
 }
 .tablesorter .header {
@@ -279,6 +279,30 @@ Register
 	background-color: #8dbdd8;
 }
 
+.tablesorter .yottaa_row {
+	background: #be1929;
+	color:#fff;
+}
+
+.tablesorter tr:nth-child(odd) .yottaa_row {
+	background:#e44f56;
+}
+
+.yottaa_header {
+	vertical-align:bottom
+}
+
 .tablesorter td {
 	border:0;
+}
+
+#leaderboard .tablesorter tbody {
+	height:450px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+#start_values td {
+	padding-right:15px;
+	border:1px solid #CDCDCD
 }
