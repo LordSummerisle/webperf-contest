@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Webperf contest - Admin dashboard</title>
+		<title>Webperf contest - 2010 contest has ended</title>
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
@@ -28,6 +28,10 @@
 		<div id="content-container">
 
 			<header class="block" id="header">
+				<div class="floatRight marg1eml">
+					Language
+					<br/><a lang="fr" title="Passer en langue française" href="finished-fr.html"><img src="http://cdn.webperf-contest.com/fr.png" alt="Français" /></a>
+				</div>
 				<div class="floatRight sponsors">
 					<div class="floatLeft marg1emr">
 						<strong>Gold sponsors</strong>
@@ -49,40 +53,19 @@
 
 				<nav id="menu" class="block clearfix bold caps">
 					<a href="/" title="Prizes, Sponsors, Rules">home</a>
-					<a href="/news.html" title="Contest news">news</a>
-					<a href="/rules.html" title="Contest rules">rules</a>
-					<a href="/faq.html" title="FAQ">FAQ</a>
-					<a href="/register.html" title="Register for the contest">register</a>
-					<a href="/leaderboard.html" title="Who's leading the contest?">leaderboard</a>
+					<a href="news.html" title="Contest news">news</a>
+					<a href="rules.html" title="Contest rules">rules</a>
+					<a href="faq.html" title="FAQ">FAQ</a>
+					<a href="leaderboard.html" title="Who's leading the contest?">leaderboard</a>
 					<a href="http://twitter.com/webperf_contest" title="Follow us on twitter">twitter</a>
-					<a href="/about.html" title="Organizers and Sponsors">about</a>
-					<a href="./" class="current" title="admin">admin</a>
+					<a href="about.html" title="Organizers and Sponsors">about</a>
 				</nav>
 			</header>
 
 			<div id="text-container">
-
-				<h1>Admin</h1>
-
-				<?php include 'dashboard.php'; ?>
-
-				
+				<h1>The contest has ended</h1>
+				<p>Ping <a href="http://twitter.com/zeroload">@zeroload</a> if you want another one!</p>
 			</div>
 		</div>
-		<script type="text/javascript">
-			var $soon = document && document.getElementsByClassName('deactivate');
-			if ($soon) {
-				for(var i = 0, limit = $soon.length; i < limit; i+=1) {
-					if($soon[i].tagName === 'A') {
-						$soon[i].href = '/soon.html';
-						$soon[i].onclick = function() {
-							return false;
-						}
-					} else {
-
-					}
-				}
-			}
-		</script>
 	</body>
 </html>

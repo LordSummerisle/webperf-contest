@@ -134,13 +134,13 @@
 			this.containers.$leaderboard.empty().append(this.containers.$table);
 			this.containers.$table.tablesorter({sortList: [[1,0]]}); // sort "onload" first
 
-			if (typeof data.nextUpdate !== 'undefined') {
-				if (data.nextUpdate === 0) {
-					this.switchToRunningUpdate();
-				} else {
-					decrementTime(data.nextUpdate, this.containers.$nextUpdateTime, lang, this.switchToRunningUpdate, this);
-				}
-			}
+//			if (typeof data.nextUpdate !== 'undefined') {
+//				if (data.nextUpdate === 0) {
+//					this.switchToRunningUpdate();
+//				} else {
+//					decrementTime(data.nextUpdate, this.containers.$nextUpdateTime, lang, this.switchToRunningUpdate, this);
+//				}
+//			}
 		}
 	};
 
