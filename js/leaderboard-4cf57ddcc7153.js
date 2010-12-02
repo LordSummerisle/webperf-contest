@@ -62,8 +62,8 @@
 		return tpl;
 	}
 
-	function buildLink(url, text) {
-		return '<a href="'+url+'">'+text+'</a>'
+	function buildLink(url, text, title) {
+		return '<a href="'+url+'"'+ (title ? ' title="'+title+'"' : '')+'>'+text+'</a>'
 	}
 
 	w.LB = {
@@ -154,12 +154,12 @@
 
 					htmlLine = tmpl({
 						name: (d.twitter ? '<a href="http://twitter.com/'+d.twitter+'">' : '')+d.name+(d.twitter ? '</a>' : ''),
-						url: buildLink(tmpl({id:d.uniqid}, entry_url), 'url'),
-						sum : buildLink(tmpl({id:d.wpt_id}, wpt_results), 'sum'),
-						PRFV : buildLink(tmpl({id:d.wpt_id, run : arfv, view : 0}, wpt_pr), 'link'),
-						PRRV : buildLink(tmpl({id:d.wpt_id, run : arrv, view : 1}, wpt_pr), 'link'),
-						WFFV : buildLink(tmpl({id:d.wpt_id, run : arfv}, wpt_wf), 'link'),
-						WFRV : buildLink(tmpl({id:d.wpt_id, run : arrv}, wpt_wf), 'link'),
+						url: buildLink(tmpl({id:d.uniqid}, entry_url), 'url', 'direct url to participant\'s work'),
+						sum : buildLink(tmpl({id:d.wpt_id}, wpt_results), 'sum', 'webpagetest summary'),
+						PRFV : buildLink(tmpl({id:d.wpt_id, run : arfv, view : 0}, wpt_pr), 'link', 'progressive rendering FIRST view'),
+						PRRV : buildLink(tmpl({id:d.wpt_id, run : arrv, view : 1}, wpt_pr), 'link', 'progressive rendering REPEAT view'),
+						WFFV : buildLink(tmpl({id:d.wpt_id, run : arfv}, wpt_wf), 'link', 'network waterfall FIRST view'),
+						WFRV : buildLink(tmpl({id:d.wpt_id, run : arrv}, wpt_wf), 'link', 'network waterfall REPEAT view'),
 						OLFV : (fv.loadTime/1000).toFixed(3),
 						OLRV : (rv.loadTime/1000).toFixed(3),
 						SRFV : (fv.render/1000).toFixed(3),
@@ -169,8 +169,8 @@
 						KBFV : (fv.bytesIn/1024).toFixed(2),
 						KBRV : (rv.bytesIn/1024).toFixed(2),
 						yottaa_score : yottaa_data[d.id] || 0,
-						gist : buildLink(d.gist.replace('github.com/', 'github.com/raw/')+"/:filename", 'view'),
-						yottaa_link : buildLink(tmpl({id:d.uniqid}, yottaa_link), 'url')
+						gist : buildLink(d.gist.replace('github.com/', 'github.com/raw/')+"/:filename", 'gist', 'raw gist, can be broken'),
+						yottaa_link : buildLink(tmpl({id:d.uniqid}, yottaa_link), 'url', 'Yottaa details')
 					}, this.templates.line);
 					this.containers.$table.append(htmlLine);
 				}
