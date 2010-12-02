@@ -178,7 +178,7 @@
 
 			this.containers.$leaderboard.empty().append(this.containers.$table);
 
-			this.containers.$table.tablesorter({sortList: [[8,0]], headers : {0:{sorter:false}, 1:{sorter:false}, 2:{sorter:false}, 3:{sorter:false}, 4:{sorter:false}, 5:{sorter:false}, 6:{sorter:false}, 7:{sorter:false}, 8:{sorter:false}, 9:{sorter:false}, 10:{sorter:false}, 12:{sorter:false}, 13:{sorter:false}, 14:{sorter:false}, 15:{sorter:false}, 16:{sorter:false}, 17:{sorter:false}, 26:{sorter:false}}}); // sort "onload" first
+			this.containers.$table.tablesorter({sortList: [[8,0]], headers : {0:{sorter:false}, 1:{sorter:false}, 2:{sorter:false}, 3:{sorter:false}, 4:{sorter:false}, 5:{sorter:false}, 6:{sorter:false}, 7:{sorter:false}, 8:{sorter:false}, 9:{sorter:false}, 10:{sorter:false}, 12:{sorter:false}, 13:{sorter:false}, 14:{sorter:false}, 15:{sorter:false}, 16:{sorter:false}, 17:{sorter:false}, 27:{sorter:false}}}); // sort "onload" first
 
 //			if (typeof data.nextUpdate !== 'undefined') {
 //				if (data.nextUpdate === 0) {
