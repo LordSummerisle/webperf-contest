@@ -159,7 +159,7 @@
 						PRFV : buildLink(tmpl({id:d.wpt_id, run : arfv, view : 0}, wpt_pr), 'link', 'progressive rendering FIRST view'),
 						PRRV : buildLink(tmpl({id:d.wpt_id, run : arrv, view : 1}, wpt_pr), 'link', 'progressive rendering REPEAT view'),
 						WFFV : buildLink(tmpl({id:d.wpt_id, run : arfv}, wpt_wf), 'link', 'network waterfall FIRST view'),
-						WFRV : buildLink(tmpl({id:d.wpt_id, run : arrv}, wpt_wf), 'link', 'network waterfall REPEAT view'),
+						WFRV : buildLink(tmpl({id:d.wpt_id, run : arrv}, wpt_wf)+'cached/', 'link', 'network waterfall REPEAT view'),
 						OLFV : (fv.loadTime/1000).toFixed(3),
 						OLRV : (rv.loadTime/1000).toFixed(3),
 						SRFV : (fv.render/1000).toFixed(3),

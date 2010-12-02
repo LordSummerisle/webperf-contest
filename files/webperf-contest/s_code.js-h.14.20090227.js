@@ -71,7 +71,7 @@ if (s.prop10)
     s.prop10=s.prop10.toLowerCase()
   if(s.prop10){
     s.eVar10=s.prop10
-    var t_search=s.getValOnce(s.eVar10,'?v12',0)
+    var t_search=s.getValOnce(s.eVar10,'?v13',0)
     if(t_search)
 		s.events=s.apl(s.events,'event1',',');
 		s.events=s.apl(s.events,'event21',',');
