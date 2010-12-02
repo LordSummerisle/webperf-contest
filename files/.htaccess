@@ -1,0 +1,24 @@
+#paramètrages identique au site de la fnac, tout est remodelable par les participants si ils en ont l'envie
+
+AddDefaultCharset ISO8859-1
+Options -Indexes
+Header unset ETag
+ExpiresActive On
+ExpiresDefault "access plus 1 hour"
+ExpiresByType text/html "now"
+ExpiresByType image/jpg "access plus 3 hours"
+ExpiresByType image/jpeg "access plus 3 hours"
+ExpiresByType image/gif "access plus 3 hours"
+ExpiresByType image/png "access plus 3 hours"
+
+SetEnvIf Request_URI "index\.html$" homepage=yes
+SetEnvIf Request_URI "\/$" homepage=yes
+
+Header add Set-Cookie "SITESERVER; expires=Sun, 23-Oct-2005 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "PID; expires=Mon, 23-Oct-2000 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "TEST=ok; expires=Fri, 23-Oct-2015 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "OrderInSession=0; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "accept=ok; expires=Fri, 23-Oct-2015 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "UID=0E3649C79-3AFD-18B8-7817-FA868BC99668; expires=Fri, 23-Oct-2015 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "SID=e85f0b48-ae1d-a5f5-aa15-fbffdc4e1c1a; expires=Fri, 23-Oct-2015 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
+Header add Set-Cookie "TTL=241020101353; expires=Fri, 23-Oct-2015 11:53:18 GMT; domain=entries.webperf-contest.com; path=/" env=homepage
