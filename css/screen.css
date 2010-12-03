@@ -267,6 +267,11 @@ Register
 	background-color:#F0F0F6;
 }
 
+.tablesorter tr:hover td,
+.tablesorter tr:nth-child(odd):hover td {
+	background-color:#8DBDD8;
+}
+
 .tablesorter .headerSortUp {
 	background-image: url(../leaderboard_imgs/asc.gif);
 }

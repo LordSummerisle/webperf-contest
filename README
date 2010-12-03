@@ -3,21 +3,7 @@ Ce repo représente le site web qui tourne sur http://webperf-contest.com
 TODO:
 
 -leaderboard jury:
-+maj frequente yottaa
-+subrillance ligne
-+date test
-+id participant
-+calcul score normalisé onload + start render (50%-50%)
-+renommer sum en wpt
-+lien vers sources par ftp
-+pourquoi le start render est il si long ? qu'est ce qui trigger le start render ? qui peut empecher le dessin ? quand est ce que IE decide de dessiner ?
-	peut etre a cause du background sur la page en entier ?
-+ source folder dans gdoc
-+css selectors optimisation
-+seo optimisation
-+html optimisation
 +lien page de base wpt
-+ enlever dernier maj javascript leaderboard
 
 Tâches vincent voyer: (si vous souhaitez les faire alors venir me demander par messagerie ou autre)
 

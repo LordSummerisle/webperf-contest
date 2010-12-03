@@ -71,14 +71,14 @@
 		templates : {
 			table_header : {
 				fra : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requêtes <sup>(n)</sup></th><th>Poids <sup>(Ko)</sup></th><th><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>",
-				eng : "<thead><tr><th colspan=\"3\" rowspan=\"2\">info</th><th colspan=\"5\">WPT links</th>"
-					  +"<th colspan=\"8\">WPT results (always average)</th>"
+				eng : "<thead><tr><th colspan=\"5\" rowspan=\"2\">info</th><th colspan=\"5\">WPT links</th>"
+					  +"<th colspan=\"9\">WPT results (always average)</th>"
 					  +"<th colspan=\"2\" rowspan=\"2\"><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr>"
 					  +"<tr>"
-					  +"<th rowspan=\"2\">sum</th><th colspan=\"2\">progressive rendering</th><th colspan=\"2\">network waterfalls</th>"
-					  +"<th colspan=\"2\">onload</th><th colspan=\"2\">start render</th><th colspan=\"2\">requests</th><th colspan=\"2\">kilobytes</th>"
+					  +"<th rowspan=\"2\">wpt</th><th colspan=\"2\">progressive rendering</th><th colspan=\"2\">network waterfalls</th>"
+					  +"<th rowspan=\"2\">ol+sr</th><th colspan=\"2\">onload</th><th colspan=\"2\">start render</th><th colspan=\"2\">requests</th><th colspan=\"2\">kilobytes</th>"
 					  +"</tr>"
-					  +"<tr><th>name</th><th>url</th><th>gist</th>"
+					  +"<tr><th>id</th><th>name</th><th>url</th><th>gist</th><th>sources</th>"
 					  +"<th>FV</th><th>RV</th><th>FV</th><th>RV</th>"
 					  +"<th>FV</th><th>RV</th><th>FV</th><th>RV</th><th>FV</th><th>RV</th><th>FV</th><th>RV</th>"
 					  +"<th>score</th><th>link</th>"
@@ -89,10 +89,10 @@
 				fra : "Dans le futur",
 				eng : "In the future"
 			},
-			line : "<tr><td>{name}</td><td>{url}</td><td>{gist}</td>"
-					  +"<td>{sum}</td><td>{PRFV}</td><td>{PRRV}</td><td>{WFFV}</td><td>{WFRV}</td>"
-					  +"<td>{OLFV}</td><td>{OLRV}</td><td>{SRFV}</td><td>{SRRV}</td><td>{RQFV}</td><td>{RQRV}</td><td>{KBFV}</td><td>{KBRV}</td>"
-					  +"<td>{yottaa_score}</td><td>{yottaa_link}</td>"
+			line : '<tr><td title="id of the participant">{id}</td><td>{name}</td><td>{url}</td><td>{gist}</td><td>{sources}</td>'
+					  +'<td>{wpt}</td><td>{PRFV}</td><td>{PRRV}</td><td>{WFFV}</td><td>{WFRV}</td>'
+					  +'<td>{ol+sr}</td><td title="onload, first view">{OLFV}</td><td title="onload, repeat view">{OLRV}</td><td title="start render, first view">{SRFV}</td><td title="start render, repeat view">{SRRV}</td><td title="number of requests, first view">{RQFV}</td><td title="number of requests, repeat view">{RQRV}</td><td title="kilobytes downloaded, first view">{KBFV}</td><td title="kilobytes downloaded, repeat view">{KBRV}</td>'
+					  +'<td title="yottaa score">{yottaa_score}</td><td>{yottaa_link}</td>'
 		},
 		containers : {
 			$nbranked : $('#nbRanked'),
@@ -131,13 +131,15 @@
 				wpt_results = "http://www.webpagetest.org/result/{id}/",
 				wpt_pr = "http://www.webpagetest.org/video/compare.php?tests={id}-r:{run}-c:{view}&ival=100",
 				wpt_wf = "http://www.webpagetest.org/result/{id}/{run}/details/",
-				yottaa_link = "http://www.yottaa.com/url/search?u=" + entry_url;
+				yottaa_link = "http://www.yottaa.com/url/search?u=" + entry_url,
+				sources_ftp_url = "ftp://webperf-contest:op4a2G4V8a@ftp.alwaysdata.com/entries/{id}/",
+				deactivateHeaders;
 
 			this.lang = lang;
 
 //			this.containers.$nbranked.text(wpt_data.length);
 
-			this.findLastUpdate(wpt_data[0].date*1000);
+//			this.findLastUpdate(wpt_data[0].date*1000);
 
 			this.containers.$table.empty().append(this.templates.table_header[lang]);
 
@@ -153,9 +155,12 @@
 					dateTmp.setTime(d.date*1000);
 
 					htmlLine = tmpl({
+						"ol+sr": ((parseFloat(fv.render)+parseFloat(fv.loadTime))/1000).toFixed(3),
+						id: '#'+d.id,
+						sources: buildLink(tmpl({id:d.uniqid}, sources_ftp_url), 'sources', 'direct url to participants files on FTP, you\'ll find unminified sources and log sometimes'),
 						name: (d.twitter ? '<a href="http://twitter.com/'+d.twitter+'">' : '')+d.name+(d.twitter ? '</a>' : ''),
-						url: buildLink(tmpl({id:d.uniqid}, entry_url), 'url', 'direct url to participant\'s work'),
-						sum : buildLink(tmpl({id:d.wpt_id}, wpt_results), 'sum', 'webpagetest summary'),
+						url: buildLink(tmpl({id:d.uniqid}, entry_url), 'url', 'direct url to participant\'s entry'),
+						wpt : buildLink(tmpl({id:d.wpt_id}, wpt_results), 'wpt', 'webpagetest summary'),
 						PRFV : buildLink(tmpl({id:d.wpt_id, run : arfv, view : 0}, wpt_pr), 'link', 'progressive rendering FIRST view'),
 						PRRV : buildLink(tmpl({id:d.wpt_id, run : arrv, view : 1}, wpt_pr), 'link', 'progressive rendering REPEAT view'),
 						WFFV : buildLink(tmpl({id:d.wpt_id, run : arfv}, wpt_wf), 'link', 'network waterfall FIRST view'),
@@ -178,7 +183,71 @@
 
 			this.containers.$leaderboard.empty().append(this.containers.$table);
 
-			this.containers.$table.tablesorter({sortList: [[8,0]], headers : {0:{sorter:false}, 1:{sorter:false}, 2:{sorter:false}, 3:{sorter:false}, 4:{sorter:false}, 5:{sorter:false}, 6:{sorter:false}, 7:{sorter:false}, 8:{sorter:false}, 9:{sorter:false}, 10:{sorter:false}, 12:{sorter:false}, 13:{sorter:false}, 14:{sorter:false}, 15:{sorter:false}, 16:{sorter:false}, 17:{sorter:false}, 27:{sorter:false}}}); // sort "onload" first
+			deactivateHeaders = {
+				0:{
+					sorter:false
+				},
+				1:{
+					sorter:false
+				},
+				2:{
+					sorter:false
+				},
+				3:{
+					sorter:false
+				},
+				4:{
+					sorter:false
+				},
+				5:{
+					sorter:false
+				},
+				6:{
+					sorter:false
+				},
+				8:{
+					sorter:false
+				},
+				9:{
+					sorter:false
+				},
+				10:{
+					sorter:false
+				},
+				11:{
+					sorter:false
+				},
+				12:{
+					sorter:false
+				},
+				14:{
+					sorter:false
+				},
+				15:{
+					sorter:false
+				},
+				16:{
+					sorter:false
+				},
+				17:{
+					sorter:false
+				},
+				18:{
+					sorter:false
+				},
+				19:{
+					sorter:false
+				},
+				20:{
+					sorter:false
+				},
+				30:{
+					sorter:false
+				}
+			};
+
+			// sort "onload" first
+			this.containers.$table.tablesorter({sortList: [[10,0]], headers : deactivateHeaders});
 
 //			if (typeof data.nextUpdate !== 'undefined') {
 //				if (data.nextUpdate === 0) {
