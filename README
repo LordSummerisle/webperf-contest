@@ -1,15 +1,28 @@
 Ce repo représente le site web qui tourne sur http://webperf-contest.com
 
-Si vous créez de nouveaux fichiers ou bien si vous souhaitez réaliser une tâche, merci de l'indiquer quelque part afin qu'on ne fasse pas deux fois la même chose !
-
-
 TODO:
 
-- Dashboard d'administration
--- possibilité d'envoyer les logins à 1 personne (renvoyer les logins)
+-leaderboard jury:
++maj frequente yottaa
++subrillance ligne
++date test
++id participant
++calcul score normalisé onload + start render (50%-50%)
++renommer sum en wpt
++lien vers sources par ftp
++pourquoi le start render est il si long ? qu'est ce qui trigger le start render ? qui peut empecher le dessin ? quand est ce que IE decide de dessiner ?
+	peut etre a cause du background sur la page en entier ?
++ source folder dans gdoc
++css selectors optimisation
++seo optimisation
++html optimisation
++lien page de base wpt
++ enlever dernier maj javascript leaderboard
 
 Tâches vincent voyer: (si vous souhaitez les faire alors venir me demander par messagerie ou autre)
 
+DONE:
+- Dashboard d'administration
 - dashboard (leaderboard) public/admin
 -- lancer automatiquement des tests WPT toutes les 2heures et enregistrer les résultats dans des fichiers JSON (deux séparés, l'un avec toutes les données = admin, l'autre avec l'essentiel : nom, (twitter) + temps de la page + nb req etc)
 -- utiliser node.js pour faire ça, ce sera simple
@@ -17,9 +30,6 @@ Tâches vincent voyer: (si vous souhaitez les faire alors venir me demander par 
 s'inspirer de http://code.webpagetest.org/svn/compete/upload.php pour lancer les tests
 -- ce dashboard permettra de classer automatiquement pour la mesure "temps WPT" et nb requetes WPT
 -- pour le classement YOTTAA il faudra peut-être ruser, il n y a pas d'API a proprement parler, peut-être faire du parsing violent
-
-
-DONE:
 -- dashboard d'administration des inscriptions avec toutes les informations + "logins envoyés, oui/non"
 --- si non = il faut créer le dossier à la main sur le FTP et créer l'utilisateur à la main avec user : uniqid et pwd = uniqid (on va pas se faire chier)
 -- fichier qui s'occupe d'envoyer les accès FTP à un utilisateur (action envoyer les logins)
@@ -63,3 +73,7 @@ préciser les modifications qu'ils ont faites (voir gist sur le formulaire)
 - rajouter le nouveau sponsor
 -- faire une partie sponsor gold et silver
 En attendant que j'organise mieux le travail ou que vous vous proposiez pour réaliser une des tâches.
+
+CANCEL:
+-- possibilité d'envoyer les logins à 1 personne (renvoyer les logins) (next time)
+Si vous créez de nouveaux fichiers ou bien si vous souhaitez réaliser une tâche, merci de l'indiquer quelque part afin qu'on ne fasse pas deux fois la même chose !
