@@ -5,10 +5,10 @@
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v14">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/reset.css?v15">
 		
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v14">
-		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v14">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/library.css?v15">
+		<link rel="stylesheet" type="text/css" href="http://cdn.webperf-contest.com/css/screen.css?v15">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];

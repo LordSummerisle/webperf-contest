@@ -58,7 +58,7 @@ s.campaign = s.getValOnce(tempCampaign, 'campaign',0);
 	if(s.campaign) {
 	stackcampaign = s.campaign;
 	if(stackcampaign.substring(0, 4).toLowerCase()=="mail"){stackcampaign = "mail";}
-	s.eVar14 = s.crossVisitParticipation(stackcampaign, 's_ev14', '30', '3', '>', 'purchase'); }
+	s.eVar14 = s.crossVisitParticipation(stackcampaign, 's_?v15', '30', '3', '>', 'purchase'); }
 
     
 	
@@ -71,7 +71,7 @@ if (s.prop10)
     s.prop10=s.prop10.toLowerCase()
   if(s.prop10){
     s.eVar10=s.prop10
-    var t_search=s.getValOnce(s.eVar10,'?v14',0)
+    var t_search=s.getValOnce(s.eVar10,'?v15',0)
     if(t_search)
 		s.events=s.apl(s.events,'event1',',');
 		s.events=s.apl(s.events,'event21',',');
