@@ -311,3 +311,16 @@ Register
 	padding-right:15px;
 	border:1px solid #CDCDCD
 }
+
+#winners {
+	border:1px solid #eee;
+}
+
+#winners h2 {
+	margin-top:0;
+}
+
+#winners nav {
+	width:25%;
+	float:left;
+}
