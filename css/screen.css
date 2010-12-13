@@ -312,15 +312,11 @@ Register
 	border:1px solid #CDCDCD
 }
 
-#winners {
-	border:1px solid #eee;
-}
-
-#winners h2 {
-	margin-top:0;
-}
-
-#winners nav {
-	width:25%;
-	float:left;
+.quote {
+	background:#eee;
+	border:1px solid #ddd;
+	-moz-border-radius:10px;
+	padding:.5em;
+	font-style:italic;
+	border-radius:10px;
 }
