@@ -66,8 +66,8 @@
 		lang : "eng",
 		templates : {
 			table_header : {
-				fra : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requêtes <sup>(n)</sup></th><th>Poids <sup>(Ko)</sup></th><th><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>",
-				eng : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requests <sup>(n)</sup></th><th>Size <sup>(kB)</sup></th><th><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>"
+				fra : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requêtes <sup>(n)</sup></th><th>Poids <sup>(Ko)</sup></th><th><img src=http://webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>",
+				eng : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requests <sup>(n)</sup></th><th>Size <sup>(kB)</sup></th><th><img src=http://webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>"
 			},
 			inthefuture : {
 				fra : "Dans le futur",
