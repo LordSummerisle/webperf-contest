@@ -27,4 +27,5 @@ RewriteRule ^confirm /finished.html [R=302,L]
 RewriteCond %{HTTP_HOST} !^webperf-contest\.com
 #RewriteCond %{HTTP_HOST} !^preview.webperf-contest\.com
 RewriteCond %{HTTP_HOST} !^cdn.webperf-contest\.com
+RewriteCond %{HTTP_HOST} !^origin.webperf-contest\.com
 RewriteRule (.*) http://webperf-contest.com/$1 [R=301,L]
