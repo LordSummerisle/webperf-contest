@@ -94,7 +94,7 @@ echo $res;
 ?>
 </table>
 
-<script type="text/javascript" src="http://cdn.webperf-contest.com/js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="http://webperf-contest.com/js/jquery-1.4.3.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	$('.leaderboardLink').click(function(){
