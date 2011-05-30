@@ -70,10 +70,10 @@
 		lang : "eng",
 		templates : {
 			table_header : {
-				fra : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requêtes <sup>(n)</sup></th><th>Poids <sup>(Ko)</sup></th><th><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>",
+				fra : "<thead><tr><th>Participant</th><th>Onload <sup>(s)</sup></th><th>Start Render <sup>(s)</sup></th><th>Requêtes <sup>(n)</sup></th><th>Poids <sup>(Ko)</sup></th><th><img src=http://webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr></thead>",
 				eng : "<thead><tr><th colspan=\"5\" rowspan=\"2\">info</th><th colspan=\"5\">WPT links</th>"
 					  +"<th colspan=\"9\">WPT results (always average)</th>"
-					  +"<th colspan=\"2\" rowspan=\"2\"><img src=http://cdn.webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr>"
+					  +"<th colspan=\"2\" rowspan=\"2\"><img src=http://webperf-contest.com/logos/yottaa.png width=70 height=19 class=yottaa_header /></th></tr>"
 					  +"<tr>"
 					  +"<th rowspan=\"2\">wpt</th><th colspan=\"2\">progressive rendering</th><th colspan=\"2\">network waterfalls</th>"
 					  +"<th rowspan=\"2\">ol+sr</th><th colspan=\"2\">onload</th><th colspan=\"2\">start render</th><th colspan=\"2\">requests</th><th colspan=\"2\">kilobytes</th>"
