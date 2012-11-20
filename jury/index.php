@@ -5,10 +5,10 @@
 
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-		<link rel="stylesheet" type="text/css" href="http://webperf-contest.com/css/reset.css?v15">
+		<link rel="stylesheet" type="text/css" href="/css/reset.css?v15">
 		
-		<link rel="stylesheet" type="text/css" href="http://webperf-contest.com/css/library.css?v15">
-		<link rel="stylesheet" type="text/css" href="http://webperf-contest.com/css/screen.css?v15">
+		<link rel="stylesheet" type="text/css" href="/css/library.css?v15">
+		<link rel="stylesheet" type="text/css" href="/css/screen.css?v15">
 
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -31,14 +31,14 @@
 				<div class="floatRight sponsors">
 					<div class="floatLeft marg1emr">
 						<strong>Gold sponsors</strong>
-						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="http://webperf-contest.com/logos/zeroload.png" alt="Zeroload" /></a>
-						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="http://webperf-contest.com/logos/yottaa.png" alt="with Yottaa" /></a>
-						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="http://webperf-contest.com/logos/alwaysdata.png" alt="and AlwaysData" /></a>
+						<a href="http://zeroload.net/blog/" title="Web Performance consultant"><img src="/logos/zeroload.png" alt="Zeroload" /></a>
+						<a href="http://www.yottaa.com" title="Web Performance Analytics"><img src="/logos/yottaa.png" alt="with Yottaa" /></a>
+						<a href="http://www.alwaysdata.com/" title="Dedicated and shared web hosting"><img src="/logos/alwaysdata.png" alt="and AlwaysData" /></a>
 					</div>
 					<div class="floatLeft">
 						<span>Silver sponsor</span>
-						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="http://webperf-contest.com/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
-						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="http://webperf-contest.com/logos/clever-age.png" alt="Clever Age" /></a>
+						<a href="http://www.catchpoint.com/" title="Web performance monitoring"><img src="/logos/catchpoint2.png" alt="Catchpoint Systems" /></a>
+						<a href="http://www.clever-age.com/" title="Digital architecture"><img src="/logos/clever-age.png" alt="Clever Age" /></a>
 					</div>
 				</div>
 
